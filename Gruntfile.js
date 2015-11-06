@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 				options: {
 					port: 9192,
 					base: 'build',
-					livereload: true
+					livereload: 35000
 				}
 			}
 		},
@@ -32,7 +32,7 @@ module.exports = function (grunt) {
 			}
 		},
 		watch: {
-			options: { livereload: 35728 },
+			options: { livereload: 35000 },
 			jade: {
 				files: ['frontend/*.jade'],
 				tasks: ['jade']
