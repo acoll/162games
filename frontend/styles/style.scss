@@ -1,0 +1,19 @@
+@import "../../node_modules/foundation-sites/scss/normalize";
+@import "../../node_modules/foundation-sites/scss/foundation/functions";
+@import "../../node_modules/foundation-sites/scss/foundation/components/_grid";
+@import "../../node_modules/foundation-sites/scss/foundation/components/_block-grid";
+
+@import "foundation-settings";
+
+@media #{$desktop} {
+	@include block-grid-html-classes($size:desktop, $include-spacing:false);
+	@include grid-html-classes($size:desktop);
+}
+@media #{$mobile} {
+	@include block-grid-html-classes($size:mobile, $include-spacing:false);
+	@include grid-html-classes($size:mobile);
+}
+
+.hide-on-mobile {
+	@media #{$mobile} { display: none; }
+}
