@@ -17,3 +17,24 @@
 .hide-on-mobile {
 	@media #{$mobile} { display: none; }
 }
+
+body{
+	text-align: center;
+}
+
+.row{
+	width:auto;
+	max-width: none;
+	margin: 0 -1vw;
+	border-bottom: solid 20px white;
+	
+	.row{ 
+		margin: 0 -1vw;
+		border:none; 
+	}
+}
+
+.columns {
+	border:solid 2px black;
+	padding: 0; 
+}
