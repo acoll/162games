@@ -1,0 +1,38 @@
+.row
+	.columns.desktop-12
+		h1 162 Games
+		p Click two teams to compare their seasons.
+	.columns.desktop-6
+		h2 American League
+		each division in ['East', 'Central', 'West']
+			.columns.desktop-4
+				h2 #{division}
+				each team in items.filter(t => t.division === division && t.conference === 'American')
+					p.team-name #{team.first_name}
+	.columns.desktop-6
+		h2 National League
+		each division in ['East', 'Central', 'West']
+			.columns.desktop-4
+				h2 #{division}
+				each team in items.filter(t => t.division === division && t.conference === 'National')
+					p.team-name #{team.first_name}
+.spacer
+.row
+	.columns.desktop-6.team-one-stats
+	.columns.desktop-6.team-two-stats
+	.columns.desktop-12
+		h1 Season Comparisons
+		.columns.desktop-2
+			h2 WIN%
+		.columns.desktop-2
+			h2 +/-
+		.columns.desktop-2
+			h2 HR
+		.columns.desktop-2
+			h2 ERA
+		.columns.desktop-2
+			h2 WHIP
+		.columns.desktop-2
+			h2 K's
+	.columns.desktop-12
+		h1 INSERT CHART HERE
