@@ -1,20 +1,7 @@
 var request = require('request-promise');
 var fs = require('fs');
 
-request({
-	uri: 'https://erikberg.com/mlb/teams.json',
-	headers: {
-		'User-Agent': 'Testing/1.0 (adamcoll.ac@gmail.com)'
-	}
-})
-.then(result => fs.writeFileSync('teams.json', result));
-
-request({
-	uri: 'https://erikberg.com/mlb/standings.json',
-	headers: {
-		'User-Agent': 'Testing/1.0 (adamcoll.ac@gmail.com)'
-	}
-})
-.then(result => fs.writeFileSync('standings.json', result));
-
-
+request('http://mlb.mlb.com/gdcross/components/game/mlb/year_2015/month_06/day_10/master_scoreboard.json')
+.then(data => JSON.parse(data))
+.then(result => result.data.games.game)
+.then(game => console.log(game));
