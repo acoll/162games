@@ -1,21 +1,31 @@
 .row
-	.columns.desktop-12
+	.columns.bottom-line.desktop-12.black-bg
 		h1 162 Games
 		p Click two teams to compare their seasons.
-	.columns.desktop-6
-		h2 American League
-		each division in ['East', 'Central', 'West']
-			.columns.desktop-4
-				h2 #{division}
-				each team in items.filter(t => t.division === division && t.conference === 'American')
-					p.team-name #{team.first_name}
-	.columns.desktop-6
-		h2 National League
-		each division in ['East', 'Central', 'West']
-			.columns.desktop-4
-				h2 #{division}
-				each team in items.filter(t => t.division === division && t.conference === 'National')
-					p.team-name #{team.first_name}
+	.columns.desktop-6.mlb-red-bg
+		.row
+			.columns.bottom-line.desktop-12
+				h1 American League
+				each division in ['East', 'Central', 'West']
+					.columns.desktop-4
+						.row
+							.columns.bottom-line.desktop-12
+								h2 #{division}
+							.columns.bottom-line.desktop-12
+								each team in items.filter(t => t.division === division && t.conference === 'American')
+									h4.team-name #{team.first_name}
+	.columns.desktop-6.mlb-blue-bg
+		.row
+			.columns.bottom-line.desktop-12
+				h1 National League
+				each division in ['East', 'Central', 'West']
+					.columns.desktop-4
+						.row
+							.columns.bottom-line.desktop-12
+								h2 #{division}
+							.columns.bottom-line.desktop-12
+								each team in items.filter(t => t.division === division && t.conference === 'National')
+									h4.team-name #{team.first_name}
 .spacer
 .row
 	.columns.desktop-6.team-one-stats
