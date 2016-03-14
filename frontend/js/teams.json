@@ -1,5 +1,5 @@
-[
-  {
+{
+  "ARI": {
     "team_id": "arizona-diamondbacks",
     "abbreviation": "ARI",
     "active": true,
@@ -17,7 +17,7 @@
       "#E3D4AD"
     ]
   },
-  {
+  "ATL": {
     "team_id": "atlanta-braves",
     "abbreviation": "ATL",
     "active": true,
@@ -34,7 +34,7 @@
       "#13274F"
     ]
   },
-  {
+  "BAL": {
     "team_id": "baltimore-orioles",
     "abbreviation": "BAL",
     "active": true,
@@ -51,7 +51,7 @@
       "#000000"
     ]
   },
-  {
+  "BOS": {
     "team_id": "boston-red-sox",
     "abbreviation": "BOS",
     "active": true,
@@ -68,9 +68,9 @@
       "#0D2B56"
     ]
   },
-  {
+  "CHN": {
     "team_id": "chicago-cubs",
-    "abbreviation": "CHC",
+    "abbreviation": "CHN",
     "active": true,
     "first_name": "Chicago",
     "last_name": "Cubs",
@@ -85,9 +85,9 @@
       "#0E3386"
     ]
   },
-  {
+  "CHA": {
     "team_id": "chicago-white-sox",
-    "abbreviation": "CHW",
+    "abbreviation": "CHA",
     "active": true,
     "first_name": "Chicago",
     "last_name": "White Sox",
@@ -102,7 +102,7 @@
       "#C4CED4"
     ]
   },
-  {
+  "CIN": {
     "team_id": "cincinnati-reds",
     "abbreviation": "CIN",
     "active": true,
@@ -119,7 +119,7 @@
       "#000000"
     ]
   },
-  {
+  "CLE": {
     "team_id": "cleveland-indians",
     "abbreviation": "CLE",
     "active": true,
@@ -136,7 +136,7 @@
       "#002B5C"
     ]
   },
-  {
+  "COL": {
     "team_id": "colorado-rockies",
     "abbreviation": "COL",
     "active": true,
@@ -154,7 +154,7 @@
       "#C4CED4"
     ]
   },
-  {
+  "DET": {
     "team_id": "detroit-tigers",
     "abbreviation": "DET",
     "active": true,
@@ -170,7 +170,7 @@
       "#0C2C56"
     ]
   },
-  {
+  "HOU": {
     "team_id": "houston-astros",
     "abbreviation": "HOU",
     "active": true,
@@ -187,9 +187,9 @@
       "#EB6E1F"
     ]
   },
-  {
+  "KCA": {
     "team_id": "kansas-city-royals",
-    "abbreviation": "KC",
+    "abbreviation": "KCA",
     "active": true,
     "first_name": "Kansas City",
     "last_name": "Royals",
@@ -204,7 +204,7 @@
       "#C09A5B"
     ]
   },
-  {
+  "LAA": {
     "team_id": "los-angeles-angels",
     "abbreviation": "LAA",
     "active": true,
@@ -216,9 +216,12 @@
     "city": "Anaheim",
     "state": "California",
     "full_name": "Los Angeles Angels",
-    "colors":  ["#BA0021", "#003263"]
+    "colors": [
+      "#BA0021",
+      "#003263"
+    ]
   },
-  {
+  "LAD": {
     "team_id": "los-angeles-dodgers",
     "abbreviation": "LAD",
     "active": true,
@@ -235,7 +238,7 @@
       "#005A9C"
     ]
   },
-  {
+  "MIA": {
     "team_id": "miami-marlins",
     "abbreviation": "MIA",
     "active": true,
@@ -254,7 +257,7 @@
       "#000000"
     ]
   },
-  {
+  "MIL": {
     "team_id": "milwaukee-brewers",
     "abbreviation": "MIL",
     "active": true,
@@ -271,7 +274,7 @@
       "#B6922E"
     ]
   },
-  {
+  "MIN": {
     "team_id": "minnesota-twins",
     "abbreviation": "MIN",
     "active": true,
@@ -288,7 +291,7 @@
       "#D31145"
     ]
   },
-  {
+  "NYM": {
     "team_id": "new-york-mets",
     "abbreviation": "NYM",
     "active": true,
@@ -305,7 +308,7 @@
       "#002D72"
     ]
   },
-  {
+  "NYY": {
     "team_id": "new-york-yankees",
     "abbreviation": "NYY",
     "active": true,
@@ -322,7 +325,7 @@
       "#003087"
     ]
   },
-  {
+  "OAK": {
     "team_id": "oakland-athletics",
     "abbreviation": "OAK",
     "active": true,
@@ -339,7 +342,7 @@
       "#EFB21E"
     ]
   },
-  {
+  "PHI": {
     "team_id": "philadelphia-phillies",
     "abbreviation": "PHI",
     "active": true,
@@ -356,7 +359,7 @@
       "#E81828"
     ]
   },
-  {
+  "PIT": {
     "team_id": "pittsburgh-pirates",
     "abbreviation": "PIT",
     "active": true,
@@ -373,7 +376,7 @@
       "#000000"
     ]
   },
-  {
+  "SD": {
     "team_id": "san-diego-padres",
     "abbreviation": "SD",
     "active": true,
@@ -389,7 +392,7 @@
       "#05143F"
     ]
   },
-  {
+  "SF": {
     "team_id": "san-francisco-giants",
     "abbreviation": "SF",
     "active": true,
@@ -407,7 +410,7 @@
       "#8B6F4E"
     ]
   },
-  {
+  "SEA": {
     "team_id": "seattle-mariners",
     "abbreviation": "SEA",
     "active": true,
@@ -425,9 +428,9 @@
       "#C4CED4"
     ]
   },
-  {
+  "SLN": {
     "team_id": "st-louis-cardinals",
-    "abbreviation": "STL",
+    "abbreviation": "SLN",
     "active": true,
     "first_name": "St. Louis",
     "last_name": "Cardinals",
@@ -437,9 +440,13 @@
     "city": "Saint Louis",
     "state": "Missouri",
     "full_name": "St. Louis Cardinals",
-    "colors": ["#C41E3A",      "#000066",           "#FEDB00"]
+    "colors": [
+      "#C41E3A",
+      "#000066",
+      "#FEDB00"
+    ]
   },
-  {
+  "TB": {
     "team_id": "tampa-bay-rays",
     "abbreviation": "TB",
     "active": true,
@@ -457,7 +464,7 @@
       "#F5D130"
     ]
   },
-  {
+  "TEX": {
     "team_id": "texas-rangers",
     "abbreviation": "TEX",
     "active": true,
@@ -474,7 +481,7 @@
       "#003278"
     ]
   },
-  {
+  "TOR": {
     "team_id": "toronto-blue-jays",
     "abbreviation": "TOR",
     "active": true,
@@ -492,7 +499,7 @@
       "#E8291C"
     ]
   },
-  {
+  "WAS": {
     "team_id": "washington-nationals",
     "abbreviation": "WAS",
     "active": true,
@@ -509,4 +516,4 @@
       "#11225B"
     ]
   }
-]
+}
