@@ -14,7 +14,9 @@ module.exports = Mn.LayoutView.extend({
 		};
 	},
 	onRender: function () {
-		var ctx = this.$el.find('#chart')[0].getContext('2d');
-		new Chart(ctx).Line(winPerc, opts);
+		if(this.$el.find('#chart')[0]) {
+			var ctx = this.$el.find('#chart')[0].getContext('2d');
+			new Chart(ctx).Line(winPerc, opts);
+		}
 	}
 });
