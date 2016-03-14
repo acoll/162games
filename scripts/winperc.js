@@ -7,11 +7,6 @@ var data = fs.readFileSync('./GL2015.TXT');
 
 var teams = {};
 
-var data = {
-    labels: Array.apply(null, {length: 162}).map(Number.call, Number).map(i => i+1),
-    datasets: []
-};
-
 csv.parse(data, (err, data) => {
 
 
@@ -31,8 +26,14 @@ csv.parse(data, (err, data) => {
 		// console.log(away, ':', awayScore);
 		// console.log(home, ':', homeScore);
 
-		if(awayScore > homeScore) teams[away].wins++;
-		else if(homeScore > awayScore) teams[home].wins++;
+		if(awayScore > homeScore) {
+			teams[away].wins++;
+			teams[home].wins--;
+		}
+		else if(homeScore > awayScore) {
+			teams[home].wins++;
+			teams[away].wins--;
+		}
 
 		teams[away].games.push({
 			game: awayGameNum,
@@ -48,7 +49,20 @@ csv.parse(data, (err, data) => {
 	})
 
 
-	console.log(JSON.stringify(teams, null, 2));
+	var data = {
+	    labels: Array.apply(null, {length: 162}).map(Number.call, Number).map(i => i+1),
+	    datasets: Object.keys(teams).map(key => {
+	    	return {
+		    	label: teamsDict[key] ? teamsDict[key].first_name + ' ' + teamsDict[key].last_name : 'UNKNOWN: ' + key,
+		    	data: teams[key].games.map(e => e.wins),
+		    	strokeColor: teamsDict[key] ? teamsDict[key].colors[0] : 'gray',
+		    	pointColor: teamsDict[key] ? teamsDict[key].colors[0] : 'gray'
+		    };
+	    })
+	};
+
+
+	console.log(JSON.stringify(data, null, 2));
 
 });
 
