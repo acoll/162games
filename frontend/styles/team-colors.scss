@@ -3,8 +3,8 @@ $arizona-diamondbacks-color-1: #A71930;
 $arizona-diamondbacks-color-2: #000000;
 $arizona-diamondbacks-color-3: #E3D4AD;
 .arizona-diamondbacks {
-	color: $arizona-diamondbacks-color-1;
-	background-color: $arizona-diamondbacks-color-3;
+	color: $arizona-diamondbacks-color-3;
+	background-color: $arizona-diamondbacks-color-1;
 }
 
 $atlanta-braves-color-1: #CE1141;
@@ -17,8 +17,8 @@ $atlanta-braves-color-2: #13274F;
 $baltimore-orioles-color-1: #DF4601;
 $baltimore-orioles-color-2: #000000;
 .baltimore-orioles {
-	color: $baltimore-orioles-color-1;
-	background-color: $baltimore-orioles-color-2;
+	color: $baltimore-orioles-color-2;
+	background-color: $baltimore-orioles-color-1;
 }
 
 $boston-red-sox-color-1: #BD3039;
@@ -38,15 +38,15 @@ $chicago-cubs-color-2: #0E3386;
 $chicago-white-sox-color-1: #000000;
 $chicago-white-sox-color-2: #C4CED4;
 .chicago-white-sox {
-	color: $chicago-white-sox-color-1;
-	background-color: $chicago-white-sox-color-2;
+	color: $chicago-white-sox-color-2;
+	background-color: $chicago-white-sox-color-1;
 }
 
 $cincinnati-reds-color-1: #C6011F;
-$cincinnati-reds-color-2: #000000;
+$cincinnati-reds-color-2: #ffffff;
 .cincinnati-reds {
-	color: $cincinnati-reds-color-1;
-	background-color: $cincinnati-reds-color-2;
+	color: $cincinnati-reds-color-2;
+	background-color: $cincinnati-reds-color-1;
 }
 
 $cleveland-indians-color-1: #E31937;
@@ -60,21 +60,23 @@ $colorado-rockies-color-1: #333366;
 $colorado-rockies-color-2: #231F20;
 $colorado-rockies-color-3: #C4CED4;
 .colorado-rockies {
-	color: $colorado-rockies-color-1;
-	background-color: $colorado-rockies-color-3;
+	color: $colorado-rockies-color-3;
+	background-color: $colorado-rockies-color-1;
 }
 
 $detroit-tigers-color-1: #0C2C56;
+$detroit-tigers-color-2: #ffffff;
+$detroit-tigers-color-3: #DE4406;
 .detroit-tigers {
-	color: $detroit-tigers-color-1;
+	color: $detroit-tigers-color-3;
 	background-color: $detroit-tigers-color-1;
 }
 
 $houston-astros-color-1: #002D62;
 $houston-astros-color-2: #EB6E1F;
 .houston-astros {
-	color: $houston-astros-color-1;
-	background-color: $houston-astros-color-2;
+	color: $houston-astros-color-2;
+	background-color: $houston-astros-color-1;
 }
 
 $kansas-city-royals-color-1: #004687;
@@ -157,8 +159,9 @@ $pittsburgh-pirates-color-2: #000000;
 }
 
 $san-diego-padres-color-1: #05143F;
+$san-diego-padres-color-2: #ffffff;
 .san-diego-padres {
-	color: $san-diego-padres-color-1;
+	color: $san-diego-padres-color-2;
 	background-color: $san-diego-padres-color-1;
 }
 
@@ -167,7 +170,7 @@ $san-francisco-giants-color-2: #000000;
 $san-francisco-giants-color-3: #8B6F4E;
 .san-francisco-giants {
 	color: $san-francisco-giants-color-1;
-	background-color: $san-francisco-giants-color-3;
+	background-color: $san-francisco-giants-color-2;
 }
 
 $seattle-mariners-color-1: #0C2C56;
