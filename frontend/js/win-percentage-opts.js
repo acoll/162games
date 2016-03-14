@@ -3,7 +3,7 @@ module.exports = {
     responsive: true,
 
     ///Boolean - Whether grid lines are shown across the chart
-    scaleShowGridLines : true,
+    scaleShowGridLines : false,
 
     //String - Colour of the grid lines
     scaleGridLineColor : "rgba(0,0,0,.05)",
@@ -12,25 +12,25 @@ module.exports = {
     scaleGridLineWidth : 1,
 
     //Boolean - Whether to show horizontal lines (except X axis)
-    scaleShowHorizontalLines: true,
+    scaleShowHorizontalLines: false,
 
     //Boolean - Whether to show vertical lines (except Y axis)
-    scaleShowVerticalLines: true,
+    scaleShowVerticalLines: false,
 
     //Boolean - Whether the line is curved between points
     bezierCurve : true,
 
     //Number - Tension of the bezier curve between points
-    bezierCurveTension : 0.4,
+    bezierCurveTension : 0.5,
 
     //Boolean - Whether to show a dot for each point
-    pointDot : true,
+    pointDot : false,
 
     //Number - Radius of each point dot in pixels
-    pointDotRadius : 4,
+    pointDotRadius : 2,
 
     //Number - Pixel width of point dot stroke
-    pointDotStrokeWidth : 1,
+    pointDotStrokeWidth : 0,
 
     //Number - amount extra to add to the radius to cater for hit detection outside the drawn point
     pointHitDetectionRadius : 20,
