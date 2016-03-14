@@ -6,6 +6,7 @@
     "backbone": "^1.2.3",
     "backbone.marionette": "marionettejs/backbone.marionette#v2.4.3",
     "browserify": "^11.2.0",
+    "chart.js": "nnnick/Chart.js",
     "foundation-sites": "zurb/foundation#v5.5.2",
     "grunt": "^0.4.5",
     "grunt-browserify": "^4.0.1",
