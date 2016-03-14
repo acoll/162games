@@ -5,6 +5,8 @@
 
 @import "foundation-settings";
 
+@import "team-colors";
+
 @media #{$desktop} {
 	@include block-grid-html-classes($size:desktop, $include-spacing:false);
 	@include grid-html-classes($size:desktop);
@@ -14,7 +16,7 @@
 	@include grid-html-classes($size:mobile);
 }
 
-html, body, h1, h2, h3, h4, h5, p { font-family: 'Roboto Slab', serif; }
+html, body, h1, h2, h3, h4, h5, p, div { font-family: 'Roboto Slab', serif; }
 
 h1{	font-size: 36px; text-transform: uppercase; line-height: 20px; }
 h2{	font-size: 28px; line-height: 10px; }
@@ -65,4 +67,11 @@ body{
 .bottom-line {
 	padding: 0;
 	border-bottom: solid 2px white;
+}
+
+.teamname {
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 2px;
+	padding-bottom: 2px;
 }

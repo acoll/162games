@@ -1,7 +1,6 @@
 .row
 	.columns.bottom-line.desktop-12.black-bg
 		h1 162 Games
-		p Click two teams to compare their seasons.
 	.columns.desktop-6.mlb-red-bg
 		.row
 			.columns.bottom-line.desktop-12
@@ -12,8 +11,8 @@
 							.columns.bottom-line.desktop-12
 								h2 #{division}
 							.columns.bottom-line.desktop-12
-								each team in items.filter(t => t.division === division && t.conference === 'American')
-									h4.team-name #{team.first_name}
+								each team in teams.filter(t => t.division === division && t.conference === 'American')
+									.teamname(class=team.team_id) #{team.first_name}
 	.columns.desktop-6.mlb-blue-bg
 		.row
 			.columns.bottom-line.desktop-12
@@ -24,25 +23,8 @@
 							.columns.bottom-line.desktop-12
 								h2 #{division}
 							.columns.bottom-line.desktop-12
-								each team in items.filter(t => t.division === division && t.conference === 'National')
-									h4.team-name #{team.first_name}
+								each team in teams.filter(t => t.division === division && t.conference === 'National')
+									.teamname(class=team.team_id) #{team.first_name}
 .spacer
 .row
-	.columns.desktop-6.team-one-stats
-	.columns.desktop-6.team-two-stats
-	.columns.desktop-12
-		h1 Season Comparisons
-		.columns.desktop-2
-			h2 WIN%
-		.columns.desktop-2
-			h2 +/-
-		.columns.desktop-2
-			h2 HR
-		.columns.desktop-2
-			h2 ERA
-		.columns.desktop-2
-			h2 WHIP
-		.columns.desktop-2
-			h2 K's
-	.columns.desktop-12
-		canvas(style='width: 100%; height: auto;')#chart
+	

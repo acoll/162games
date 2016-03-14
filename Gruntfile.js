@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 module.exports = function (grunt) {
 	grunt.initConfig({
 		clean: { build: ['build'] },
@@ -80,7 +82,40 @@ module.exports = function (grunt) {
 					]
 				}
 			}
+		},
+		json_to_scss: {
+			teams: {
+				inputFile: './frontend/js/teams.json',
+				varname: 'colors',
+				outputFile: 'frontend/styles/__generated-color-map.scss'
+			}
 		}
+	});
+
+	grunt.registerMultiTask('json_to_scss', function () {
+		var jsonFile = this.data.inputFile;
+		var varName = this.data.varname;
+		var outputFile = this.data.outputFile;
+
+		grunt.log.writeln(`Generating ${outputFile} from ${jsonFile}...`);
+		var teams = require(jsonFile);
+		var scss = '/* THIS FILE IS GENERATED WITH `grunt json-to-scss`. Dont edit it.*/\n';
+		scss += `/* GENERATED FROM ${jsonFile} */\n`;
+		scss += teams.map((team) => {
+			// console.log('TEAM:', team);
+
+			var colorVars = team.colors.map((c,i) => `$${team.team_id}-color-${i+1}: ${c};`).join('\n');
+
+			return `
+${colorVars}
+.${team.team_id} {
+	color: $${team.team_id}-color-1;
+	background-color: $${team.team_id}-color-${team.colors.length};
+}
+`;
+		}).join('');
+		
+		fs.writeFileSync(outputFile, scss);
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-clean');
