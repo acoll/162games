@@ -204,9 +204,9 @@
       "#C09A5B"
     ]
   },
-  "LAA": {
+  "ANA": {
     "team_id": "los-angeles-angels",
-    "abbreviation": "LAA",
+    "abbreviation": "ANA",
     "active": true,
     "first_name": "Los Angeles",
     "last_name": "Angels",
@@ -221,9 +221,9 @@
       "#003263"
     ]
   },
-  "LAD": {
+  "LAN": {
     "team_id": "los-angeles-dodgers",
-    "abbreviation": "LAD",
+    "abbreviation": "LAN",
     "active": true,
     "first_name": "Los Angeles",
     "last_name": "Dodgers",
@@ -291,9 +291,9 @@
       "#D31145"
     ]
   },
-  "NYM": {
+  "NYN": {
     "team_id": "new-york-mets",
-    "abbreviation": "NYM",
+    "abbreviation": "NYN",
     "active": true,
     "first_name": "New York",
     "last_name": "Mets",
@@ -308,9 +308,9 @@
       "#002D72"
     ]
   },
-  "NYY": {
+  "NYA": {
     "team_id": "new-york-yankees",
-    "abbreviation": "NYY",
+    "abbreviation": "NYA",
     "active": true,
     "first_name": "New York",
     "last_name": "Yankees",
@@ -376,9 +376,9 @@
       "#000000"
     ]
   },
-  "SD": {
+  "SDN": {
     "team_id": "san-diego-padres",
-    "abbreviation": "SD",
+    "abbreviation": "SDN",
     "active": true,
     "first_name": "San Diego",
     "last_name": "Padres",
@@ -392,9 +392,9 @@
       "#05143F"
     ]
   },
-  "SF": {
+  "SFN": {
     "team_id": "san-francisco-giants",
-    "abbreviation": "SF",
+    "abbreviation": "SFN",
     "active": true,
     "first_name": "San Francisco",
     "last_name": "Giants",
@@ -446,9 +446,9 @@
       "#FEDB00"
     ]
   },
-  "TB": {
+  "TBA": {
     "team_id": "tampa-bay-rays",
-    "abbreviation": "TB",
+    "abbreviation": "TBA",
     "active": true,
     "first_name": "Tampa Bay",
     "last_name": "Rays",

@@ -4,11 +4,7 @@ var winPerc = require('../win-percentage.json');
 var Chart = require('chart.js');
 var _ = require('underscore');
 
-var opts = { 
-	responsive: true, 
-	bezierCurve: false,
-	datasetFill: false
-};
+var opts = require('../win-percentage-opts.js');
 
 module.exports = Mn.LayoutView.extend({
 	template: require('../templates/layout.jade'),

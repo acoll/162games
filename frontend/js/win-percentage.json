@@ -1684,7 +1684,7 @@
       "pointColor": "#134A8E"
     },
     {
-      "label": "UNKNOWN: NYA",
+      "label": "New York Yankees",
       "data": [
         -1,
         0,
@@ -1849,8 +1849,8 @@
         7,
         6
       ],
-      "strokeColor": "gray",
-      "pointColor": "gray"
+      "strokeColor": "#E4002B",
+      "pointColor": "#E4002B"
     },
     {
       "label": "Texas Rangers",
@@ -2191,7 +2191,7 @@
       "pointColor": "#003831"
     },
     {
-      "label": "UNKNOWN: ANA",
+      "label": "Los Angeles Angels",
       "data": [
         -1,
         0,
@@ -2356,8 +2356,8 @@
         3,
         2
       ],
-      "strokeColor": "gray",
-      "pointColor": "gray"
+      "strokeColor": "#BA0021",
+      "pointColor": "#BA0021"
     },
     {
       "label": "Seattle Mariners",
@@ -2698,7 +2698,7 @@
       "pointColor": "#DF4601"
     },
     {
-      "label": "UNKNOWN: TBA",
+      "label": "Tampa Bay Rays",
       "data": [
         -1,
         -2,
@@ -2863,11 +2863,11 @@
         5,
         4
       ],
-      "strokeColor": "gray",
-      "pointColor": "gray"
+      "strokeColor": "#092C5C",
+      "pointColor": "#092C5C"
     },
     {
-      "label": "UNKNOWN: SFN",
+      "label": "San Francisco Giants",
       "data": [
         1,
         0,
@@ -3032,8 +3032,8 @@
         -1,
         -2
       ],
-      "strokeColor": "gray",
-      "pointColor": "gray"
+      "strokeColor": "#FD5A1E",
+      "pointColor": "#FD5A1E"
     },
     {
       "label": "Arizona Diamondbacks",
@@ -3543,7 +3543,7 @@
       "pointColor": "#C6011F"
     },
     {
-      "label": "UNKNOWN: SDN",
+      "label": "San Diego Padres",
       "data": [
         -1,
         0,
@@ -3708,11 +3708,11 @@
         -13,
         -14
       ],
-      "strokeColor": "gray",
-      "pointColor": "gray"
+      "strokeColor": "#05143F",
+      "pointColor": "#05143F"
     },
     {
-      "label": "UNKNOWN: LAN",
+      "label": "Los Angeles Dodgers",
       "data": [
         1,
         0,
@@ -3877,8 +3877,8 @@
         23,
         24
       ],
-      "strokeColor": "gray",
-      "pointColor": "gray"
+      "strokeColor": "#EF3E42",
+      "pointColor": "#EF3E42"
     },
     {
       "label": "Atlanta Braves",
@@ -4895,7 +4895,7 @@
       "pointColor": "#284898"
     },
     {
-      "label": "UNKNOWN: NYN",
+      "label": "New York Mets",
       "data": [
         1,
         0,
@@ -5060,8 +5060,8 @@
         7,
         8
       ],
-      "strokeColor": "gray",
-      "pointColor": "gray"
+      "strokeColor": "#FF5910",
+      "pointColor": "#FF5910"
     },
     {
       "label": "Washington Nationals",
