@@ -25,8 +25,27 @@
 							.columns.bottom-line.desktop-12
 								each team in teams.filter(t => t.division === division && t.conference === 'National')
 									.teamname(class=team.team_id) #{team.first_name}
-.spacer
+	.columns.desktop-12.black-bg
+		h6 Select a team or teams to highlight their metrics in the charts below.
+	.columns.desktop-12
+		h3.align-center Games Above or Below .500
 .row
 	.columns.desktop-12
 		.chart-holder
 			canvas#chart
+	.columns.desktop-6
+		h3.align-center Home Runs
+		.chart-holder
+			canvas#chart2
+	.columns.desktop-6
+		h3.align-center Earned Runs Allowed
+		.chart-holder
+			canvas#chart3
+	.columns.desktop-6
+		h3.align-center Errors
+		.chart-holder
+			canvas#chart4
+	.columns.desktop-6
+		h3.align-center Runs +/-
+		.chart-holder
+			canvas#chart5
