@@ -12,9 +12,8 @@ module.exports = {
         type: 'line'
     },
 	xAxis: {
-	    enabled: false,
         allowDecimals: false,
-        title: { text: 'Fruit' },
+        title: { text: 'Game' },
         visible: false
 	},
 	yAxis: {
@@ -26,7 +25,12 @@ module.exports = {
 	    }]
 	},
 	tooltip: {
-	    valueSuffix: ''
+	    valueSuffix: '',
+	    style: {
+                bottom: 40,
+                top: 40,
+                fontWeight: 'bold'
+            }
 	},
 	legend: {
 	    enabled: false
