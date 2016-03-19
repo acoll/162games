@@ -27,9 +27,11 @@ function buildDataSeries (fn) {
 var datas = {
 	wins: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.wins) }),
 	homeruns: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.homeruns) }),
-	runs: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.runs) }),
+	runs: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.runsPm) }),
+	runsPm: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.runs) }),
 	stolenBases: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.stolenBases) }),
-	averages: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.averages) })
+	averages: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.averages) }),
+	strikeouts: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.strikeouts) })
 };
 
 var opts = require('../win-percentage-opts.js');
@@ -130,6 +132,8 @@ module.exports = Mn.LayoutView.extend({
 
 		var newData = datas[chartName] || datas.homeruns;
 
-		this.hittingChart = Highcharts.chart(this.$el.find('#hitting-chart')[0], newData);
+		this.hittingChart = Highcharts.chart(this.$el.find('#pitching-chart')[0], newData);
+
+		this.highlightSelected();
 	}
 });

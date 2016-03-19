@@ -36,15 +36,15 @@
 			h3.align-center Hitting
 			.row.no-marg
 				.columns.desktop-2
-					h4.active-chart.pick-chart-hitting(chart='homeruns') HRs
+					h4.active-chart.pick-chart-hitting.clickable(chart='homeruns') HRs
 				.columns.desktop-2
-					h4.pick-chart-hitting(chart='runs') RUNS
+					h4.pick-chart-hitting.clickable(chart='runs') RUNS
 				.columns.desktop-2
-					h4 RUN+/-
+					h4.pick-chart-hitting.clickable(chart='runsPm') RUN+/-
 				.columns.desktop-2
-					h4.pick-chart-hitting(chart='averages') AVG
+					h4.pick-chart-hitting.clickable(chart='averages') AVG
 				.columns.desktop-2
-					h4.pick-chart-hitting(chart='stolenBases') SB
+					h4.pick-chart-hitting.clickable(chart='stolenBases') SB
 				.columns.desktop-2
 					h4 SLG%
 				.columns.desktop-12
@@ -53,18 +53,18 @@
 		.columns.desktop-6.no-pad-LR
 			h3.align-center Pitching
 			.row.no-marg
-				.columns.desktop-2.active-chart
-					h4 ERA
 				.columns.desktop-2
-					h4 WHIP
+					h4.pick-chart-pitching.clickable ERA
 				.columns.desktop-2
-					h4 Ks
+					h4.pick-chart-pitching.clickable WHIP
 				.columns.desktop-2
-					h4 K/9
+					h4.pick-chart-pitching.clickable(chart='strikeouts') Ks
 				.columns.desktop-2
-					h4 BB/9
+					h4.pick-chart-pitching.clickable K/9
 				.columns.desktop-2
-					h4 ERR
+					h4.pick-chart-pitching.clickable BB/9
+				.columns.desktop-2
+					h4.pick-chart-pitching.clickable(chart='strikeouts') ERR
 				.columns.desktop-12
 					.chart-holder
 						#pitching-chart
