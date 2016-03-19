@@ -19,7 +19,17 @@ function buildDataSeries (fn) {
 			name: gameData[key] ? teams[key].first_name + ' ' + teams[key].last_name : 'UNKNOWN: ' + key,
 			data: gameData[key].games.map(fn),
 			type: 'line',
-			color: strokeColor
+			color: strokeColor,
+			lineWidth: 2,
+			marker: {
+                symbol: `url(/images/${teams[key].team_id}.svg)`,
+                radius: 0,
+                states: {
+                	hover: {
+                		radius: 15
+                	}
+                }
+            },
 	    };
     });
 }
@@ -31,7 +41,8 @@ var datas = {
 	runsPm: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.runsPm) }),
 	stolenBases: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.stolenBases) }),
 	averages: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.averages) }),
-	strikeouts: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.strikeouts) })
+	strikeouts: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.strikeouts) }),
+	errors: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.errors) })
 };
 
 var opts = require('../win-percentage-opts.js');
@@ -55,7 +66,7 @@ module.exports = Mn.LayoutView.extend({
 	onRender: function () {
 		this.chart = Highcharts.chart(this.$el.find('#chart')[0], datas.wins);
 		this.hittingChart = Highcharts.chart(this.$el.find('#hitting-chart')[0], datas.homeruns);
-		this.hittingChart = Highcharts.chart(this.$el.find('#hitting-chart')[0], datas.errors);
+		this.pitchingChart = Highcharts.chart(this.$el.find('#pitching-chart')[0], datas.errors);
 	},
 	highlightSelected: function () {
 		Object.keys(this.selectedTeams).forEach(k => {
@@ -65,19 +76,34 @@ module.exports = Mn.LayoutView.extend({
 	highlightTeam: function (name) {
 		var seriesChart = this.chart.series.find(series => series.name === name);
 		var seriesHitting = this.hittingChart.series.find(series => series.name === name);
+		var seriesPitching = this.pitchingChart.series.find(series => series.name === name);
 
 		console.log(seriesChart.options);
 
 		if(!this.selectedTeams[name]) {
 			seriesChart.options.color = color(seriesChart.options.color).alpha(0.05).cssa();
+			seriesChart.options.lineWidth = 2;
+
 			seriesHitting.options.color = color(seriesHitting.options.color).alpha(0.05).cssa();
+			seriesHitting.options.lineWidth = 2;
+
+			seriesPitching.options.color = color(seriesHitting.options.color).alpha(0.05).cssa();
+			seriesPitching.options.lineWidth = 2;
 		} else {
 			seriesChart.options.color = color(seriesChart.options.color).alpha(1).cssa();
+			seriesChart.options.lineWidth = 4;
+
+
 			seriesHitting.options.color = color(seriesHitting.options.color).alpha(1).cssa();
+			seriesHitting.options.lineWidth = 4;
+
+			seriesPitching.options.color = color(seriesHitting.options.color).alpha(1).cssa();
+			seriesPitching.options.lineWidth = 4;
 		}
 
 		seriesChart.update(seriesChart.options);
 		seriesHitting.update(seriesHitting.options);
+		seriesPitching.update(seriesPitching.options);
 	},
 	clickedTeam: function (e) {
 		e.preventDefault();

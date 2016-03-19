@@ -82,7 +82,8 @@ csv.parse(data, (err, data) => {
 			runsPm: teams[away].runsPm,
 			stolenBases: teams[away].stolenBases,
 			averages: teams[away].hits / teams[away].atBats,
-			strikeouts: teams[away].strikeouts
+			strikeouts: teams[away].strikeouts,
+			errors: teams[away].errors
 		});
 		teams[home].games.push({
 			game: homeGameNum,
@@ -93,7 +94,8 @@ csv.parse(data, (err, data) => {
 			runsPm: teams[home].runsPm,
 			stolenBases: teams[home].stolenBases,
 			averages: teams[home].hits / teams[home].atBats,
-			strikeouts: teams[home].strikeouts
+			strikeouts: teams[home].strikeouts,
+			errors: teams[home].errors
 		});
 
 	});
