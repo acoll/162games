@@ -1,9 +1,29 @@
 var Mn = require('backbone.marionette');
-var teams = window.teams = require('../teams.json');
-var winPerc = require('../win-percentage.json');
 var Chart = require('chart.js');
 var _ = require('underscore');
 var color = require('onecolor');
+
+var teams = window.teams = require('../teams.json');
+var gameData = require('../games.json');
+
+function buildChartOpts (fn) {
+	 return {
+		labels: Array.apply(null, {length: 162}).map(Number.call, Number).map(i => i),
+		datasets: Object.keys(teams).map(key => {
+			var rgb = color(teams[key].colors[0]);
+			var highlightColor = rgb.cssa();
+			var strokeColor = rgb.cssa();
+			return {
+				label: gameData[key] ? teams[key].first_name + ' ' + teams[key].last_name : 'UNKNOWN: ' + key,
+				data: gameData[key].games.map(fn),
+				strokeColor: strokeColor,
+				pointColor: highlightColor
+		    };
+	    })
+	};
+}
+
+var winPerc = buildChartOpts(g => g.wins);
 
 var opts = require('../win-percentage-opts.js');
 
@@ -35,6 +55,8 @@ module.exports = Mn.LayoutView.extend({
 		var teamId = e.currentTarget.getAttribute('teamId');
 
 		var name = teams[teamId].first_name + ' ' + teams[teamId].last_name;
+
+		console.log(name);
 
 		if(this.selectedTeams[name]) delete this.selectedTeams[name];
 		else this.selectedTeams[name] = teamId;

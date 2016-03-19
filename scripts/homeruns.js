@@ -24,9 +24,6 @@ csv.parse(data, (err, data) => {
 		if(!teams[away]) teams[away] = { games: [], wins: 0 };
 		if(!teams[home]) teams[home] = { games: [], wins: 0 };
 
-		// console.log(away, ':', awayScore);
-		// console.log(home, ':', homeScore);
-
 		if(awayScore > homeScore) {
 			teams[away].wins++;
 			teams[home].wins--;
@@ -70,11 +67,3 @@ csv.parse(data, (err, data) => {
 	console.log(JSON.stringify(data, null, 2));
 
 });
-
-
-// return {
-// 		label: [teams[key].first_name, teams[key].last_name].join(' '),
-// 		data: winPerc[key].games.map(e => e.perc),
-// 		strokeColor: teams[key].colors[0],
-// 		pointColor: teams[key].colors[0]
-// 	};
