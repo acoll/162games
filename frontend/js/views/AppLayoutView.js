@@ -44,7 +44,8 @@ var datas = {
 	averages: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.averages) }),
 	strikeouts: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.strikeouts) }),
 	errors: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.errors) }),
-	slugPercentage:_.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.slugPercentage) }),
+	slugPercentage: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.slugPercentage) }),
+	era: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.era) })
 };
 
 var opts = require('../win-percentage-opts.js');
