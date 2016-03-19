@@ -89,6 +89,14 @@ module.exports = function (grunt) {
 				varname: 'colors',
 				outputFile: 'frontend/styles/__generated-color-map.scss'
 			}
+		},
+		copy: {
+		  main: {
+		    expand: true,
+		    flatten: true,
+		    src: 'frontend/styles/images/*',
+		    dest: 'build/images',
+		  },
 		}
 	});
 
@@ -121,12 +129,13 @@ ${colorVars}
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-browserify');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 
-	grunt.registerTask('default', ['clean', 'jade', 'sass', 'jshint', 'browserify', 'connect', 'watch']);
+	grunt.registerTask('default', ['clean', 'jade', 'sass', 'copy', 'jshint', 'browserify', 'connect', 'watch']);
 	grunt.registerTask('build', ['clean', 'jade', 'sass', 'copy', 'jshint', 'browserify']);
 };
