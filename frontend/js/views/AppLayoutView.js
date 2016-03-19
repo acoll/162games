@@ -27,8 +27,8 @@ function buildDataSeries (fn) {
 var datas = {
 	wins: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.wins) }),
 	homeruns: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.homeruns) }),
-	runs: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.runsPm) }),
-	runsPm: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.runs) }),
+	runs: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.runs) }),
+	runsPm: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.runsPm) }),
 	stolenBases: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.stolenBases) }),
 	averages: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.averages) }),
 	strikeouts: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.strikeouts) })
@@ -55,6 +55,7 @@ module.exports = Mn.LayoutView.extend({
 	onRender: function () {
 		this.chart = Highcharts.chart(this.$el.find('#chart')[0], datas.wins);
 		this.hittingChart = Highcharts.chart(this.$el.find('#hitting-chart')[0], datas.homeruns);
+		this.hittingChart = Highcharts.chart(this.$el.find('#hitting-chart')[0], datas.errors);
 	},
 	highlightSelected: function () {
 		Object.keys(this.selectedTeams).forEach(k => {
@@ -132,7 +133,7 @@ module.exports = Mn.LayoutView.extend({
 
 		var newData = datas[chartName] || datas.homeruns;
 
-		this.hittingChart = Highcharts.chart(this.$el.find('#pitching-chart')[0], newData);
+		this.pitchingChart = Highcharts.chart(this.$el.find('#pitching-chart')[0], newData);
 
 		this.highlightSelected();
 	}

@@ -52,7 +52,7 @@ body{
 .spacer{
 	height:2vh;
 }
-.pick-chart-hitting{
+.pick-chart-hitting, .pick-chart-pitching{
 	color: #000000;
 	transition: color .25s ease-in-out;
 	&.active-chart{
