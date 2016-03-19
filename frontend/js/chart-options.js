@@ -32,7 +32,6 @@ module.exports = {
 	    enabled: false
 	},
 	plotOptions: {
-
         series: {
             marker: {
                 radius: 0,
