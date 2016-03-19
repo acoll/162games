@@ -12,6 +12,9 @@ module.exports = Mn.LayoutView.extend({
 	events: {
 		'click .teamname': 'clickedTeam'
 	},
+	initialize: function () {
+		this.selectedTeams = {};
+	},
 	templateHelpers: function () {
 		return {
 			teams: _.values(teams)
@@ -33,11 +36,21 @@ module.exports = Mn.LayoutView.extend({
 
 		var name = teams[teamId].first_name + ' ' + teams[teamId].last_name;
 
-		console.log(name);
+		if(this.selectedTeams[name]) delete this.selectedTeams[name];
+		else this.selectedTeams[name] = teamId;
 
-		var dataset = this.chart.datasets.find(dataset => dataset.label === name);
+		this.$el.find('.teamname').addClass('inactive');
 
-		dataset.strokeColor = color(dataset.strokeColor).alpha(1).cssa() ;
+		Object.keys(this.selectedTeams).forEach(name => {
+			this.$el.find('[teamId=' + this.selectedTeams[name] + ']').removeClass('inactive');
+		});
+
+		this.chart.datasets.forEach(dataset => {
+			if(this.selectedTeams[dataset.label])
+				dataset.strokeColor = color(dataset.strokeColor).alpha(1).cssa();
+			else
+				dataset.strokeColor = color(dataset.strokeColor).alpha(0.1).cssa();
+		});
 
 		this.chart.update();
 	}

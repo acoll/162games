@@ -331,7 +331,7 @@
         31,
         30
       ],
-      "strokeColor": "rgba(196,30,58,0.05)",
+      "strokeColor": "rgba(196,30,58,1)",
       "pointColor": "rgba(196,30,58,1)"
     },
     {
@@ -501,7 +501,7 @@
         37,
         38
       ],
-      "strokeColor": "rgba(204,52,51,0.05)",
+      "strokeColor": "rgba(204,52,51,1)",
       "pointColor": "rgba(204,52,51,1)"
     },
     {
@@ -671,7 +671,7 @@
         15,
         14
       ],
-      "strokeColor": "rgba(0,43,92,0.05)",
+      "strokeColor": "rgba(0,43,92,1)",
       "pointColor": "rgba(0,43,92,1)"
     },
     {
@@ -840,7 +840,7 @@
         -2,
         -1
       ],
-      "strokeColor": "rgba(12,44,86,0.05)",
+      "strokeColor": "rgba(12,44,86,1)",
       "pointColor": "rgba(12,44,86,1)"
     },
     {
@@ -1009,7 +1009,7 @@
         -4,
         -3
       ],
-      "strokeColor": "rgba(227,25,55,0.05)",
+      "strokeColor": "rgba(227,25,55,1)",
       "pointColor": "rgba(227,25,55,1)"
     },
     {
@@ -1179,7 +1179,7 @@
         1,
         0
       ],
-      "strokeColor": "rgba(0,45,98,0.05)",
+      "strokeColor": "rgba(0,45,98,1)",
       "pointColor": "rgba(0,45,98,1)"
     },
     {
@@ -1349,7 +1349,7 @@
         5,
         4
       ],
-      "strokeColor": "rgba(0,0,0,0.05)",
+      "strokeColor": "rgba(0,0,0,1)",
       "pointColor": "rgba(0,0,0,1)"
     },
     {
@@ -1519,7 +1519,7 @@
         23,
         24
       ],
-      "strokeColor": "rgba(0,70,135,0.05)",
+      "strokeColor": "rgba(0,70,135,1)",
       "pointColor": "rgba(0,70,135,1)"
     },
     {
@@ -1689,7 +1689,7 @@
         -7,
         -6
       ],
-      "strokeColor": "rgba(19,74,142,0.05)",
+      "strokeColor": "rgba(19,74,142,1)",
       "pointColor": "rgba(19,74,142,1)"
     },
     {
@@ -1859,7 +1859,7 @@
         7,
         6
       ],
-      "strokeColor": "rgba(228,0,43,0.05)",
+      "strokeColor": "rgba(228,0,43,1)",
       "pointColor": "rgba(228,0,43,1)"
     },
     {
@@ -2029,7 +2029,7 @@
         3,
         4
       ],
-      "strokeColor": "rgba(192,17,31,0.05)",
+      "strokeColor": "rgba(192,17,31,1)",
       "pointColor": "rgba(192,17,31,1)"
     },
     {
@@ -2199,7 +2199,7 @@
         -17,
         -18
       ],
-      "strokeColor": "rgba(0,56,49,0.05)",
+      "strokeColor": "rgba(0,56,49,1)",
       "pointColor": "rgba(0,56,49,1)"
     },
     {
@@ -2369,7 +2369,7 @@
         3,
         2
       ],
-      "strokeColor": "rgba(186,0,33,0.05)",
+      "strokeColor": "rgba(186,0,33,1)",
       "pointColor": "rgba(186,0,33,1)"
     },
     {
@@ -2539,7 +2539,7 @@
         -9,
         -8
       ],
-      "strokeColor": "rgba(12,44,86,0.05)",
+      "strokeColor": "rgba(12,44,86,1)",
       "pointColor": "rgba(12,44,86,1)"
     },
     {
@@ -2709,7 +2709,7 @@
         3,
         4
       ],
-      "strokeColor": "rgba(223,70,1,0.05)",
+      "strokeColor": "rgba(223,70,1,1)",
       "pointColor": "rgba(223,70,1,1)"
     },
     {
@@ -2879,7 +2879,7 @@
         5,
         4
       ],
-      "strokeColor": "rgba(9,44,92,0.05)",
+      "strokeColor": "rgba(9,44,92,1)",
       "pointColor": "rgba(9,44,92,1)"
     },
     {
@@ -3049,7 +3049,7 @@
         -1,
         -2
       ],
-      "strokeColor": "rgba(253,90,30,0.05)",
+      "strokeColor": "rgba(253,90,30,1)",
       "pointColor": "rgba(253,90,30,1)"
     },
     {
@@ -3219,7 +3219,7 @@
         -13,
         -12
       ],
-      "strokeColor": "rgba(167,25,48,0.05)",
+      "strokeColor": "rgba(167,25,48,1)",
       "pointColor": "rgba(167,25,48,1)"
     },
     {
@@ -3389,7 +3389,7 @@
         17,
         18
       ],
-      "strokeColor": "rgba(253,184,39,0.05)",
+      "strokeColor": "rgba(253,184,39,1)",
       "pointColor": "rgba(253,184,39,1)"
     },
     {
@@ -3559,7 +3559,7 @@
         -29,
         -30
       ],
-      "strokeColor": "rgba(198,1,31,0.05)",
+      "strokeColor": "rgba(198,1,31,1)",
       "pointColor": "rgba(198,1,31,1)"
     },
     {
@@ -3729,7 +3729,7 @@
         -13,
         -14
       ],
-      "strokeColor": "rgba(5,20,63,0.05)",
+      "strokeColor": "rgba(5,20,63,1)",
       "pointColor": "rgba(5,20,63,1)"
     },
     {
@@ -3899,7 +3899,7 @@
         23,
         24
       ],
-      "strokeColor": "rgba(239,62,66,0.05)",
+      "strokeColor": "rgba(239,62,66,1)",
       "pointColor": "rgba(239,62,66,1)"
     },
     {
@@ -4069,7 +4069,7 @@
         -15,
         -14
       ],
-      "strokeColor": "rgba(206,17,65,0.05)",
+      "strokeColor": "rgba(206,17,65,1)",
       "pointColor": "rgba(206,17,65,1)"
     },
     {
@@ -4239,7 +4239,7 @@
         -19,
         -20
       ],
-      "strokeColor": "rgba(255,102,0,0.05)",
+      "strokeColor": "rgba(255,102,0,1)",
       "pointColor": "rgba(255,102,0,1)"
     },
     {
@@ -4409,7 +4409,7 @@
         -13,
         -12
       ],
-      "strokeColor": "rgba(51,51,102,0.05)",
+      "strokeColor": "rgba(51,51,102,1)",
       "pointColor": "rgba(51,51,102,1)"
     },
     {
@@ -4579,7 +4579,7 @@
         -19,
         -20
       ],
-      "strokeColor": "rgba(10,35,81,0.05)",
+      "strokeColor": "rgba(10,35,81,1)",
       "pointColor": "rgba(10,35,81,1)"
     },
     {
@@ -4749,7 +4749,7 @@
         7,
         6
       ],
-      "strokeColor": "rgba(189,48,57,0.05)",
+      "strokeColor": "rgba(189,48,57,1)",
       "pointColor": "rgba(189,48,57,1)"
     },
     {
@@ -4919,7 +4919,7 @@
         -27,
         -26
       ],
-      "strokeColor": "rgba(40,72,152,0.05)",
+      "strokeColor": "rgba(40,72,152,1)",
       "pointColor": "rgba(40,72,152,1)"
     },
     {
@@ -5089,7 +5089,7 @@
         7,
         8
       ],
-      "strokeColor": "rgba(255,89,16,0.05)",
+      "strokeColor": "rgba(255,89,16,1)",
       "pointColor": "rgba(255,89,16,1)"
     },
     {
@@ -5259,7 +5259,7 @@
         1,
         0
       ],
-      "strokeColor": "rgba(171,0,3,0.05)",
+      "strokeColor": "rgba(171,0,3,1)",
       "pointColor": "rgba(171,0,3,1)"
     }
   ]

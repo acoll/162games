@@ -55,7 +55,7 @@ csv.parse(data, (err, data) => {
 	    datasets: Object.keys(teams).map(key => {
 	    	var rgb = color(teamsDict[key].colors[0]);
 	    	var highlightColor = rgb.cssa();
-	    	var strokeColor = rgb.alpha(.05).cssa();
+	    	var strokeColor = rgb.cssa();
 	    	return {
 	    		teamId: key,
 		    	label: teamsDict[key] ? teamsDict[key].first_name + ' ' + teamsDict[key].last_name : 'UNKNOWN: ' + key,
