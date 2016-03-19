@@ -1,5 +1,7 @@
 module.exports = {
 
+    animation: false,
+
     scaleFontSize: 0,
 
     maintainAspectRatio: false,

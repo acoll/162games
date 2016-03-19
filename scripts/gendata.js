@@ -8,6 +8,14 @@ var data = fs.readFileSync('./GL2015.TXT');
 
 var teams = {};
 
+var Team = function () {
+	this.games = [];
+	this.wins = 0;
+	this.homeruns = 0;
+	this.totalWins = 0;
+	this.totalLosses = 0;
+}
+
 csv.parse(data, (err, data) => {
 
 
@@ -21,8 +29,8 @@ csv.parse(data, (err, data) => {
 		var awayScore = row[9];
 		var homeScore = row[10];
 
-		if(!teams[away]) teams[away] = { games: [], wins: 0, homeruns: 0 };
-		if(!teams[home]) teams[home] = { games: [], wins: 0, homeruns: 0 };
+		if(!teams[away]) teams[away] = new Team();
+		if(!teams[home]) teams[home] = new Team();
 
 		teams[away].homeruns += parseInt(row[25]);
 		teams[home].homeruns += parseInt(row[53]);
@@ -32,7 +40,7 @@ csv.parse(data, (err, data) => {
 			teams[away].wins++;
 			teams[home].wins--;
 		}
-		else if(homeScore > awayScore) {
+		if(homeScore > awayScore) {
 			teams[home].wins++;
 			teams[away].wins--;
 		}

@@ -24,6 +24,7 @@ function buildChartOpts (fn) {
 }
 
 var winPerc = buildChartOpts(g => g.wins);
+var homeRuns = buildChartOpts(g => g.homeruns);
 
 var opts = require('../win-percentage-opts.js');
 
@@ -43,11 +44,11 @@ module.exports = Mn.LayoutView.extend({
 	onRender: function () {
 		if(this.$el.find('#chart')[0]) {
 			var ctx = this.$el.find('#chart')[0].getContext('2d');
-			var chart = this.chart= window.chart = new Chart(ctx).Line(winPerc, opts);
-
-			chart.update();
-
+			this.chart = new Chart(ctx).Line(winPerc, opts);
 		}
+
+		this.hittingChart = new Chart(this.$el.find('#hitting-chart')[0].getContext('2d')).Line(homeRuns, opts);
+
 	},
 	clickedTeam: function (e) {
 		e.preventDefault();
