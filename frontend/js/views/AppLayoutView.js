@@ -31,7 +31,7 @@ function buildDataSeries (fn) {
 	return Object.keys(teams).map(key => {
 		var rgb = color(teams[key].colors[0]);
 		var highlightColor = rgb.cssa();
-		var strokeColor = rgb.cssa();
+		var strokeColor = rgb.alpha(0.05).cssa();
 		return {
 			name: gameData[key] ? teams[key].first_name + ' ' + teams[key].last_name : 'UNKNOWN: ' + key,
 			data: gameData[key].games.map(fn),
@@ -67,7 +67,7 @@ module.exports = Mn.LayoutView.extend({
 
 
 
-		Highcharts.chart(this.$el.find('#chart')[0], _.extend(chartOptions, { series: buildDataSeries(g => g.wins) }));
+		this.chart = Highcharts.chart(this.$el.find('#chart')[0], _.extend(chartOptions, { series: buildDataSeries(g => g.wins) }));
 
 		// if(this.$el.find('#chart')[0]) {
 		// 	var ctx = this.$el.find('#chart')[0].getContext('2d');
@@ -86,8 +86,19 @@ module.exports = Mn.LayoutView.extend({
 
 		console.log(name);
 
-		if(this.selectedTeams[name]) delete this.selectedTeams[name];
-		else this.selectedTeams[name] = teamId;
+
+		var series = this.chart.series.find(series => series.name === name);
+
+		if(this.selectedTeams[name]) {
+			delete this.selectedTeams[name];
+			series.options.color = color(series.options.color).alpha(0.05).cssa();
+		}
+		else {
+			this.selectedTeams[name] = teamId;
+			series.options.color = color(series.options.color).alpha(1).cssa();
+		}
+
+		series.update(series.options);
 
 		this.$el.find('.teamname').addClass('inactive');
 
@@ -95,14 +106,6 @@ module.exports = Mn.LayoutView.extend({
 			this.$el.find('[teamId=' + this.selectedTeams[name] + ']').removeClass('inactive');
 		});
 
-		this.chart.datasets.forEach(dataset => {
-			if(this.selectedTeams[dataset.label])
-				dataset.strokeColor = color(dataset.strokeColor).alpha(1).cssa();
-			else
-				dataset.strokeColor = color(dataset.strokeColor).alpha(0.1).cssa();
-		});
-
-		this.chart.update();
 	},
 	changeHittingChart: function (e) {
 		var chartName = e.currentTarget.getAttribute('chart');
