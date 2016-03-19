@@ -12,9 +12,6 @@ module.exports = {
             type: 'line'
         },
 	xAxis: {
-	    enabled: false
-	},
-	xAxis: {
             allowDecimals: false,
             title: {
                 text: 'Fruit'

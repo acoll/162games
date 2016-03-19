@@ -9,23 +9,6 @@ var chartOptions = require('../chart-options');
 var teams = window.teams = require('../teams.json');
 var gameData = require('../games.json');
 
-function buildChartOpts (fn) {
-	 return {
-		labels: Array.apply(null, {length: 162}).map(Number.call, Number).map(i => i),
-		datasets: Object.keys(teams).map(key => {
-			var rgb = color(teams[key].colors[0]);
-			var highlightColor = rgb.cssa();
-			var strokeColor = rgb.cssa();
-			return {
-				label: gameData[key] ? teams[key].first_name + ' ' + teams[key].last_name : 'UNKNOWN: ' + key,
-				data: gameData[key].games.map(fn),
-				strokeColor: strokeColor,
-				pointColor: highlightColor
-		    };
-	    })
-	};
-}
-
 
 function buildDataSeries (fn) {
 	return Object.keys(teams).map(key => {
@@ -41,9 +24,13 @@ function buildDataSeries (fn) {
     });
 }
 
-var winPerc = buildChartOpts(g => g.wins);
-var homeRuns = buildChartOpts(g => g.homeruns);
-var runsData = buildChartOpts(g => g.runs);
+var datas = {
+	wins: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.wins) }),
+	homeruns: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.homeruns) }),
+	runs: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.runs) }),
+	stolenBases: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.stolenBases) }),
+	averages: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.averages) })
+};
 
 var opts = require('../win-percentage-opts.js');
 
@@ -64,18 +51,30 @@ module.exports = Mn.LayoutView.extend({
 		};
 	},
 	onRender: function () {
+		this.chart = Highcharts.chart(this.$el.find('#chart')[0], datas.wins);
+		this.hittingChart = Highcharts.chart(this.$el.find('#hitting-chart')[0], datas.homeruns);
+	},
+	highlightSelected: function () {
+		Object.keys(this.selectedTeams).forEach(k => {
+			this.highlightTeam(k);
+		});
+	},
+	highlightTeam: function (name) {
+		var seriesChart = this.chart.series.find(series => series.name === name);
+		var seriesHitting = this.hittingChart.series.find(series => series.name === name);
 
+		console.log(seriesChart.options);
 
+		if(!this.selectedTeams[name]) {
+			seriesChart.options.color = color(seriesChart.options.color).alpha(0.05).cssa();
+			seriesHitting.options.color = color(seriesHitting.options.color).alpha(0.05).cssa();
+		} else {
+			seriesChart.options.color = color(seriesChart.options.color).alpha(1).cssa();
+			seriesHitting.options.color = color(seriesHitting.options.color).alpha(1).cssa();
+		}
 
-		this.chart = Highcharts.chart(this.$el.find('#chart')[0], _.extend(chartOptions, { series: buildDataSeries(g => g.wins) }));
-
-		// if(this.$el.find('#chart')[0]) {
-		// 	var ctx = this.$el.find('#chart')[0].getContext('2d');
-		// 	this.chart = new Chart(ctx).Line(winPerc, opts);
-		// }
-
-		// this.hittingChart = new Chart(this.$el.find('#hitting-chart')[0].getContext('2d')).Line(homeRuns, opts);
-
+		seriesChart.update(seriesChart.options);
+		seriesHitting.update(seriesHitting.options);
 	},
 	clickedTeam: function (e) {
 		e.preventDefault();
@@ -86,19 +85,13 @@ module.exports = Mn.LayoutView.extend({
 
 		console.log(name);
 
-
-		var series = this.chart.series.find(series => series.name === name);
-
 		if(this.selectedTeams[name]) {
 			delete this.selectedTeams[name];
-			series.options.color = color(series.options.color).alpha(0.05).cssa();
-		}
-		else {
+		} else {
 			this.selectedTeams[name] = teamId;
-			series.options.color = color(series.options.color).alpha(1).cssa();
 		}
 
-		series.update(series.options);
+		this.highlightTeam(name);
 
 		this.$el.find('.teamname').addClass('inactive');
 
@@ -118,11 +111,11 @@ module.exports = Mn.LayoutView.extend({
 		}
 		console.log(chartName);
 
-		var newData = {
-			'runs': runsData
-		}[chartName] || homeRuns;
+		var newData = datas[chartName] || datas.homeruns;
 
-		this.hittingChart = new Chart(this.$el.find('#hitting-chart')[0].getContext('2d')).Line(newData, opts);
+		this.hittingChart = Highcharts.chart(this.$el.find('#hitting-chart')[0], newData);
+
+		this.highlightSelected();
 	},
 	changePitchingChart: function (e) {
 		var chartName = e.currentTarget.getAttribute('chart');
@@ -135,11 +128,8 @@ module.exports = Mn.LayoutView.extend({
 		}
 		console.log(chartName);
 
-		var newData = {
-			'runs': runsData,
-			'homeruns': homeRuns
-		}[chartName] || homeRuns;
+		var newData = datas[chartName] || datas.homeruns;
 
-		this.hittingChart = new Chart(this.$el.find('#pitching-chart')[0].getContext('2d')).Line(newData, opts);
+		this.hittingChart = Highcharts.chart(this.$el.find('#hitting-chart')[0], newData);
 	}
 });

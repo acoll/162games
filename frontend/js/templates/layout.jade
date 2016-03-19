@@ -42,14 +42,14 @@
 				.columns.desktop-2
 					h4 RUN+/-
 				.columns.desktop-2
-					h4 AVG
+					h4.pick-chart-hitting(chart='averages') AVG
 				.columns.desktop-2
-					h4 SB
+					h4.pick-chart-hitting(chart='stolenBases') SB
 				.columns.desktop-2
 					h4 SLG%
 				.columns.desktop-12
 					.chart-holder
-						canvas#hitting-chart
+						#hitting-chart
 		.columns.desktop-6.no-pad-LR
 			h3.align-center Pitching
 			.row.no-marg
@@ -67,5 +67,5 @@
 					h4 ERR
 				.columns.desktop-12
 					.chart-holder
-						p PLACE CHART HERE
+						#pitching-chart
 		.spacer
