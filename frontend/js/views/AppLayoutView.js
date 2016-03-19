@@ -22,7 +22,7 @@ function buildDataSeries (fn) {
 			color: strokeColor,
 			lineWidth: 2,
 			marker: {
-                symbol: `url(/images/${teams[key].team_id}.svg)`,
+                // symbol: `url(/images/${teams[key].team_id}.svg)`,
                 radius: 0,
                 states: {
                 	hover: {
