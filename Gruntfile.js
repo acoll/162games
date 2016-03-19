@@ -78,7 +78,12 @@ module.exports = function (grunt) {
 							]
 						}],
 						'jadeify',
-						'babelify'
+						['babelify', {
+				          "presets": [
+				            "es2015"
+				          ],
+				          "extensions": [".js", ".jade"]
+				        }]
 					]
 				}
 			}
