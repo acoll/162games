@@ -94,7 +94,7 @@ body{
 	padding-bottom: 2px;
 	&.inactive{
 		opacity: 0.5;
-
+		transition: opacity .25s ease-in-out;
 
 	}
 }
