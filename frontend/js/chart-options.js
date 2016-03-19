@@ -1,18 +1,22 @@
 module.exports = {
 	title: {
-	    text: 'Monthly Average Temperature',
+	    text: '',
 	    x: -20 //center
 	},
 	subtitle: {
-	    text: 'Source: WorldClimate.com',
+	    text: '',
 	    x: -20
 	},
+	chart: {
+            backgroundColor: 'none',
+            type: 'line'
+        },
 	xAxis: {
-	    categories: []
+	    enabled: false
 	},
 	yAxis: {
 	    title: {
-	        text: 'Temperature (°C)'
+	        text: 'Wins +/-'
 	    },
 	    plotLines: [{
 	        value: 0,
@@ -21,12 +25,9 @@ module.exports = {
 	    }]
 	},
 	tooltip: {
-	    valueSuffix: '°C'
+	    valueSuffix: 'Wins'
 	},
 	legend: {
-	    layout: 'vertical',
-	    align: 'right',
-	    verticalAlign: 'middle',
-	    borderWidth: 0
+	    enabled: false
 	}
 };

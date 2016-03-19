@@ -25,7 +25,7 @@
 							.row.no-bg
 								.columns.bottom-line.desktop-12.no-pad-top
 									each team in teams.filter(t => t.division === division && t.conference === 'National')
-										.teamname.clickable(class=team.team_id teamId=team.abbreviation)  #{team.first_name}
+										.teamname.clickable(class=team.team_id teamId=team.abbreviation) #{team.first_name}
 		.columns.desktop-12
 			.spacer
 			h3.align-center Team Win/Loss
