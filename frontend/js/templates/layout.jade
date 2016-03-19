@@ -25,14 +25,14 @@
 									h3 #{division}
 									each team in teams.filter(t => t.division === division && t.conference === 'National')
 										.teamname(class=team.team_id teamId=team.abbreviation) #{team.first_name}
-		.columns.desktop-12
+		.columns.desktop-12.grey-bg
 			h3.align-center Team Win/Loss
 			.chart-holder
 				canvas#chart
 		.columns.desktop-6
-			h3.align-center Offense
+			h3.align-center Hitting
 			.row
-				.columns.desktop-2
+				.columns.desktop-2.grey-bg
 					h6 HRs
 				.columns.desktop-2
 					h6 RUNS
@@ -46,10 +46,10 @@
 					h6 SLG%
 			.chart-holder
 				p PLACE CHART HERE
-		.columns.desktop-6
+		.columns.desktop-6.no-pad-LR
 			h3.align-center Pitching
 			.row
-				.columns.desktop-2
+				.columns.desktop-2.grey-bg
 					h6 ERA
 				.columns.desktop-2
 					h6 WHIP
@@ -61,5 +61,5 @@
 					h6 BB/9
 				.columns.desktop-2
 					h6 AST
-			.chart-holder
+			.chart-holder.grey-bg
 				p PLACE CHART HERE
