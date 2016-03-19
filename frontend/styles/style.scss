@@ -52,13 +52,15 @@ body{
 .spacer{
 	height:2vh;
 }
-.active-chart{
-	text-decoration:underline;
-	color: rgba(209, 33, 25, 1);
-	transition: color 0.25s ease-in-out;
-
+.pick-chart-hitting{
+	color: #000000;
+	transition: color .25s ease-in-out;
+	&.active-chart{
+		text-decoration:underline;
+		color: rgba(209, 33, 25, 1);
+		transition: color 0.25s ease-in-out;
+	}
 }
-
 .mlb-red-bg{
 	background-color: rgba(209, 33, 25, 1);
 	color: #ffffff;
@@ -92,6 +94,8 @@ body{
 	font-weight: bold;
 	padding-top: 2px;
 	padding-bottom: 2px;
+	opacity: 1;
+	transition: opacity .25s ease-in-out;
 	&.inactive{
 		opacity: 0.5;
 		transition: opacity .25s ease-in-out;
