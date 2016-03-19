@@ -8,22 +8,17 @@ module.exports = {
 	    x: -20
 	},
 	chart: {
-            backgroundColor: 'none',
-            type: 'line'
-        },
+        backgroundColor: 'none',
+        type: 'line'
+    },
 	xAxis: {
-            allowDecimals: false,
-            title: {
-                text: 'Fruit'
-            },
-            visible: false
-        },
-	    enabled: false
+	    enabled: false,
+        allowDecimals: false,
+        title: { text: 'Fruit' },
+        visible: false
 	},
 	yAxis: {
-	    title: {
-	        text: ''
-	    },
+	    title: { text: '' },
 	    plotLines: [{
 	        value: 0,
 	        width: 1,
