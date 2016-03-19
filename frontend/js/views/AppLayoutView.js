@@ -110,7 +110,8 @@ module.exports = Mn.LayoutView.extend({
 		console.log(chartName);
 
 		var newData = {
-			'runs': runsData
+			'runs': runsData,
+			'homeruns': homeRuns
 		}[chartName] || homeRuns;
 
 		this.hittingChart = new Chart(this.$el.find('#pitching-chart')[0].getContext('2d')).Line(newData, opts);
