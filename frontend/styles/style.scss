@@ -26,24 +26,43 @@ h5{	font-size: 18px; font-weight: 700; }
 h6{	font-size: 16px; text-transform: uppercase; }
 p{	font-size: 16px; }
 
-.hide-on-mobile {
-	@media #{$mobile} { display: none; }
-}
-
 body{
 	text-align: center;
 }
+.container {
+	padding-left: 0;
+	padding-right: 0;
+	margin:0vw;
+	// .columns {
+	// 	padding-top: 0;
+	// 	padding-bottom: 0;
+	// }
+}
 
-.row{
-	width:auto;
-	max-width: none;
-	margin: 0 -1vw;
-	
-	.row{ 
+.row {
+	width: 100%;
+	max-width:none;
+	padding-bottom: 0;
+	margin: 0vw;
+
+	.row{
 		margin: 0 -1vw;
-		border:none; 
+	}
+
+	.columns {
+		&.no-pad-top{ padding-top: 0;}
+		&.no-pad-bottom{ padding-bottom: 0;}
+		&.no-pad-left{ padding-left: 0;}
+		&.no-pad-right{ padding-right: 0;}
+		&.no-pad-all{ padding: 0;}
+		&.yes-pad-top{ padding-top: 10vh;}
+		&.yes-pad-bottom{ padding-bottom: 10vh;}
+		&.yes-pad-left{ padding-left: 5vw;}
+		&.yes-pad-right{ padding-right: 5vw;}
+		&.yes-pad-all{ padding: 5vw;}
 	}
 }
+
 .half-height{
 	height: 500px;
 }
@@ -67,9 +86,7 @@ body{
 	background-color: rgba(0, 0, 0, 1);
 	color: #ffffff;
 }
-.columns {
-	padding: 0 1vw;
-}
+
 .bottom-line {
 	padding: 0;
 }
@@ -79,6 +96,9 @@ body{
 	font-weight: bold;
 	padding-top: 2px;
 	padding-bottom: 2px;
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #000000;
 }
 
 .chart-holder {
