@@ -1,4 +1,5 @@
 var fs = require('fs');
+var color = require('onecolor');
 var csv = require('csv');
 var teamsDict = require('../frontend/js/teams.json');
 
@@ -50,13 +51,16 @@ csv.parse(data, (err, data) => {
 
 
 	var data = {
-	    labels: Array.apply(null, {length: 162}).map(Number.call, Number).map(i => i+1),
+	    labels: Array.apply(null, {length: 162}).map(Number.call, Number).map(i => i),
 	    datasets: Object.keys(teams).map(key => {
+	    	var rgb = color(teamsDict[key].colors[0]);
+	    	var highlightColor = rgb.cssa();
+	    	var strokeColor = rgb.alpha(.2).cssa();
 	    	return {
 		    	label: teamsDict[key] ? teamsDict[key].first_name + ' ' + teamsDict[key].last_name : 'UNKNOWN: ' + key,
 		    	data: teams[key].games.map(e => e.wins),
-		    	strokeColor: teamsDict[key] ? teamsDict[key].colors[0] : 'gray',
-		    	pointColor: teamsDict[key] ? teamsDict[key].colors[0] : 'gray'
+		    	strokeColor: strokeColor,
+		    	pointColor: highlightColor
 		    };
 	    })
 	};

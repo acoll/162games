@@ -16,7 +16,8 @@ module.exports = Mn.LayoutView.extend({
 	onRender: function () {
 		if(this.$el.find('#chart')[0]) {
 			var ctx = this.$el.find('#chart')[0].getContext('2d');
-			new Chart(ctx).Line(winPerc, opts);
+			window.chart = new Chart(ctx).Line(winPerc, opts);
+
 		}
 	}
 });

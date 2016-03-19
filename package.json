@@ -20,6 +20,7 @@
     "grunt-sass": "^1.1.0",
     "jadeify": "github:domenic/jadeify",
     "jquery": "github:jquery/jquery#2.1.4",
+    "onecolor": "^3.0.0",
     "request-promise": "github:request/request-promise",
     "underscore": "^1.8.3",
     "wrapify": "github:acoll/wrapify"
