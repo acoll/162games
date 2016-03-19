@@ -1,5 +1,7 @@
 module.exports = {
 
+    scaleFontSize: 0,
+
     maintainAspectRatio: false,
 
     responsive: true,
@@ -35,7 +37,7 @@ module.exports = {
     pointDotStrokeWidth : 0,
 
     //Number - amount extra to add to the radius to cater for hit detection outside the drawn point
-    pointHitDetectionRadius : 20,
+    pointHitDetectionRadius : 2,
 
     //Boolean - Whether to show a stroke for datasets
     datasetStroke : true,
@@ -47,6 +49,6 @@ module.exports = {
     datasetFill : false,
 
     //String - A legend template
-    legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+    legendTemplate : "<h4>HELLO</h4><ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 
 };

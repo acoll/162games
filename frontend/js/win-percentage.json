@@ -165,6 +165,7 @@
   ],
   "datasets": [
     {
+      "teamId": "SLN",
       "label": "St. Louis Cardinals",
       "data": [
         1,
@@ -330,11 +331,11 @@
         31,
         30
       ],
-      "strokeColor": "rgba(196,30,58,0.2)",
-      "pointColor": "rgba(196,30,58,1)",
-      "__highlightColor": "rgba(196,30,58,1)"
+      "strokeColor": "rgba(196,30,58,0.05)",
+      "pointColor": "rgba(196,30,58,1)"
     },
     {
+      "teamId": "CHN",
       "label": "Chicago Cubs",
       "data": [
         -1,
@@ -500,11 +501,11 @@
         37,
         38
       ],
-      "strokeColor": "rgba(204,52,51,0.2)",
-      "pointColor": "rgba(204,52,51,1)",
-      "__highlightColor": "rgba(204,52,51,1)"
+      "strokeColor": "rgba(204,52,51,0.05)",
+      "pointColor": "rgba(204,52,51,1)"
     },
     {
+      "teamId": "MIN",
       "label": "Minnesota Twins",
       "data": [
         -1,
@@ -670,11 +671,11 @@
         15,
         14
       ],
-      "strokeColor": "rgba(0,43,92,0.2)",
-      "pointColor": "rgba(0,43,92,1)",
-      "__highlightColor": "rgba(0,43,92,1)"
+      "strokeColor": "rgba(0,43,92,0.05)",
+      "pointColor": "rgba(0,43,92,1)"
     },
     {
+      "teamId": "DET",
       "label": "Detroit Tigers",
       "data": [
         1,
@@ -839,11 +840,11 @@
         -2,
         -1
       ],
-      "strokeColor": "rgba(12,44,86,0.2)",
-      "pointColor": "rgba(12,44,86,1)",
-      "__highlightColor": "rgba(12,44,86,1)"
+      "strokeColor": "rgba(12,44,86,0.05)",
+      "pointColor": "rgba(12,44,86,1)"
     },
     {
+      "teamId": "CLE",
       "label": "Cleveland Indians",
       "data": [
         -1,
@@ -1008,11 +1009,11 @@
         -4,
         -3
       ],
-      "strokeColor": "rgba(227,25,55,0.2)",
-      "pointColor": "rgba(227,25,55,1)",
-      "__highlightColor": "rgba(227,25,55,1)"
+      "strokeColor": "rgba(227,25,55,0.05)",
+      "pointColor": "rgba(227,25,55,1)"
     },
     {
+      "teamId": "HOU",
       "label": "Houston Astros",
       "data": [
         1,
@@ -1178,11 +1179,11 @@
         1,
         0
       ],
-      "strokeColor": "rgba(0,45,98,0.2)",
-      "pointColor": "rgba(0,45,98,1)",
-      "__highlightColor": "rgba(0,45,98,1)"
+      "strokeColor": "rgba(0,45,98,0.05)",
+      "pointColor": "rgba(0,45,98,1)"
     },
     {
+      "teamId": "CHA",
       "label": "Chicago White Sox",
       "data": [
         -1,
@@ -1348,11 +1349,11 @@
         5,
         4
       ],
-      "strokeColor": "rgba(0,0,0,0.2)",
-      "pointColor": "rgba(0,0,0,1)",
-      "__highlightColor": "rgba(0,0,0,1)"
+      "strokeColor": "rgba(0,0,0,0.05)",
+      "pointColor": "rgba(0,0,0,1)"
     },
     {
+      "teamId": "KCA",
       "label": "Kansas City Royals",
       "data": [
         1,
@@ -1518,11 +1519,11 @@
         23,
         24
       ],
-      "strokeColor": "rgba(0,70,135,0.2)",
-      "pointColor": "rgba(0,70,135,1)",
-      "__highlightColor": "rgba(0,70,135,1)"
+      "strokeColor": "rgba(0,70,135,0.05)",
+      "pointColor": "rgba(0,70,135,1)"
     },
     {
+      "teamId": "TOR",
       "label": "Toronto Blue Jays",
       "data": [
         1,
@@ -1688,11 +1689,11 @@
         -7,
         -6
       ],
-      "strokeColor": "rgba(19,74,142,0.2)",
-      "pointColor": "rgba(19,74,142,1)",
-      "__highlightColor": "rgba(19,74,142,1)"
+      "strokeColor": "rgba(19,74,142,0.05)",
+      "pointColor": "rgba(19,74,142,1)"
     },
     {
+      "teamId": "NYA",
       "label": "New York Yankees",
       "data": [
         -1,
@@ -1858,11 +1859,11 @@
         7,
         6
       ],
-      "strokeColor": "rgba(228,0,43,0.2)",
-      "pointColor": "rgba(228,0,43,1)",
-      "__highlightColor": "rgba(228,0,43,1)"
+      "strokeColor": "rgba(228,0,43,0.05)",
+      "pointColor": "rgba(228,0,43,1)"
     },
     {
+      "teamId": "TEX",
       "label": "Texas Rangers",
       "data": [
         -1,
@@ -2028,11 +2029,11 @@
         3,
         4
       ],
-      "strokeColor": "rgba(192,17,31,0.2)",
-      "pointColor": "rgba(192,17,31,1)",
-      "__highlightColor": "rgba(192,17,31,1)"
+      "strokeColor": "rgba(192,17,31,0.05)",
+      "pointColor": "rgba(192,17,31,1)"
     },
     {
+      "teamId": "OAK",
       "label": "Oakland Athletics",
       "data": [
         1,
@@ -2198,11 +2199,11 @@
         -17,
         -18
       ],
-      "strokeColor": "rgba(0,56,49,0.2)",
-      "pointColor": "rgba(0,56,49,1)",
-      "__highlightColor": "rgba(0,56,49,1)"
+      "strokeColor": "rgba(0,56,49,0.05)",
+      "pointColor": "rgba(0,56,49,1)"
     },
     {
+      "teamId": "ANA",
       "label": "Los Angeles Angels",
       "data": [
         -1,
@@ -2368,11 +2369,11 @@
         3,
         2
       ],
-      "strokeColor": "rgba(186,0,33,0.2)",
-      "pointColor": "rgba(186,0,33,1)",
-      "__highlightColor": "rgba(186,0,33,1)"
+      "strokeColor": "rgba(186,0,33,0.05)",
+      "pointColor": "rgba(186,0,33,1)"
     },
     {
+      "teamId": "SEA",
       "label": "Seattle Mariners",
       "data": [
         1,
@@ -2538,11 +2539,11 @@
         -9,
         -8
       ],
-      "strokeColor": "rgba(12,44,86,0.2)",
-      "pointColor": "rgba(12,44,86,1)",
-      "__highlightColor": "rgba(12,44,86,1)"
+      "strokeColor": "rgba(12,44,86,0.05)",
+      "pointColor": "rgba(12,44,86,1)"
     },
     {
+      "teamId": "BAL",
       "label": "Baltimore Orioles",
       "data": [
         1,
@@ -2708,11 +2709,11 @@
         3,
         4
       ],
-      "strokeColor": "rgba(223,70,1,0.2)",
-      "pointColor": "rgba(223,70,1,1)",
-      "__highlightColor": "rgba(223,70,1,1)"
+      "strokeColor": "rgba(223,70,1,0.05)",
+      "pointColor": "rgba(223,70,1,1)"
     },
     {
+      "teamId": "TBA",
       "label": "Tampa Bay Rays",
       "data": [
         -1,
@@ -2878,11 +2879,11 @@
         5,
         4
       ],
-      "strokeColor": "rgba(9,44,92,0.2)",
-      "pointColor": "rgba(9,44,92,1)",
-      "__highlightColor": "rgba(9,44,92,1)"
+      "strokeColor": "rgba(9,44,92,0.05)",
+      "pointColor": "rgba(9,44,92,1)"
     },
     {
+      "teamId": "SFN",
       "label": "San Francisco Giants",
       "data": [
         1,
@@ -3048,11 +3049,11 @@
         -1,
         -2
       ],
-      "strokeColor": "rgba(253,90,30,0.2)",
-      "pointColor": "rgba(253,90,30,1)",
-      "__highlightColor": "rgba(253,90,30,1)"
+      "strokeColor": "rgba(253,90,30,0.05)",
+      "pointColor": "rgba(253,90,30,1)"
     },
     {
+      "teamId": "ARI",
       "label": "Arizona Diamondbacks",
       "data": [
         -1,
@@ -3218,11 +3219,11 @@
         -13,
         -12
       ],
-      "strokeColor": "rgba(167,25,48,0.2)",
-      "pointColor": "rgba(167,25,48,1)",
-      "__highlightColor": "rgba(167,25,48,1)"
+      "strokeColor": "rgba(167,25,48,0.05)",
+      "pointColor": "rgba(167,25,48,1)"
     },
     {
+      "teamId": "PIT",
       "label": "Pittsburgh Pirates",
       "data": [
         -1,
@@ -3388,11 +3389,11 @@
         17,
         18
       ],
-      "strokeColor": "rgba(253,184,39,0.2)",
-      "pointColor": "rgba(253,184,39,1)",
-      "__highlightColor": "rgba(253,184,39,1)"
+      "strokeColor": "rgba(253,184,39,0.05)",
+      "pointColor": "rgba(253,184,39,1)"
     },
     {
+      "teamId": "CIN",
       "label": "Cincinnati Reds",
       "data": [
         1,
@@ -3558,11 +3559,11 @@
         -29,
         -30
       ],
-      "strokeColor": "rgba(198,1,31,0.2)",
-      "pointColor": "rgba(198,1,31,1)",
-      "__highlightColor": "rgba(198,1,31,1)"
+      "strokeColor": "rgba(198,1,31,0.05)",
+      "pointColor": "rgba(198,1,31,1)"
     },
     {
+      "teamId": "SDN",
       "label": "San Diego Padres",
       "data": [
         -1,
@@ -3728,11 +3729,11 @@
         -13,
         -14
       ],
-      "strokeColor": "rgba(5,20,63,0.2)",
-      "pointColor": "rgba(5,20,63,1)",
-      "__highlightColor": "rgba(5,20,63,1)"
+      "strokeColor": "rgba(5,20,63,0.05)",
+      "pointColor": "rgba(5,20,63,1)"
     },
     {
+      "teamId": "LAN",
       "label": "Los Angeles Dodgers",
       "data": [
         1,
@@ -3898,11 +3899,11 @@
         23,
         24
       ],
-      "strokeColor": "rgba(239,62,66,0.2)",
-      "pointColor": "rgba(239,62,66,1)",
-      "__highlightColor": "rgba(239,62,66,1)"
+      "strokeColor": "rgba(239,62,66,0.05)",
+      "pointColor": "rgba(239,62,66,1)"
     },
     {
+      "teamId": "ATL",
       "label": "Atlanta Braves",
       "data": [
         1,
@@ -4068,11 +4069,11 @@
         -15,
         -14
       ],
-      "strokeColor": "rgba(206,17,65,0.2)",
-      "pointColor": "rgba(206,17,65,1)",
-      "__highlightColor": "rgba(206,17,65,1)"
+      "strokeColor": "rgba(206,17,65,0.05)",
+      "pointColor": "rgba(206,17,65,1)"
     },
     {
+      "teamId": "MIA",
       "label": "Miami Marlins",
       "data": [
         -1,
@@ -4238,11 +4239,11 @@
         -19,
         -20
       ],
-      "strokeColor": "rgba(255,102,0,0.2)",
-      "pointColor": "rgba(255,102,0,1)",
-      "__highlightColor": "rgba(255,102,0,1)"
+      "strokeColor": "rgba(255,102,0,0.05)",
+      "pointColor": "rgba(255,102,0,1)"
     },
     {
+      "teamId": "COL",
       "label": "Colorado Rockies",
       "data": [
         1,
@@ -4408,11 +4409,11 @@
         -13,
         -12
       ],
-      "strokeColor": "rgba(51,51,102,0.2)",
-      "pointColor": "rgba(51,51,102,1)",
-      "__highlightColor": "rgba(51,51,102,1)"
+      "strokeColor": "rgba(51,51,102,0.05)",
+      "pointColor": "rgba(51,51,102,1)"
     },
     {
+      "teamId": "MIL",
       "label": "Milwaukee Brewers",
       "data": [
         -1,
@@ -4578,11 +4579,11 @@
         -19,
         -20
       ],
-      "strokeColor": "rgba(10,35,81,0.2)",
-      "pointColor": "rgba(10,35,81,1)",
-      "__highlightColor": "rgba(10,35,81,1)"
+      "strokeColor": "rgba(10,35,81,0.05)",
+      "pointColor": "rgba(10,35,81,1)"
     },
     {
+      "teamId": "BOS",
       "label": "Boston Red Sox",
       "data": [
         1,
@@ -4748,11 +4749,11 @@
         7,
         6
       ],
-      "strokeColor": "rgba(189,48,57,0.2)",
-      "pointColor": "rgba(189,48,57,1)",
-      "__highlightColor": "rgba(189,48,57,1)"
+      "strokeColor": "rgba(189,48,57,0.05)",
+      "pointColor": "rgba(189,48,57,1)"
     },
     {
+      "teamId": "PHI",
       "label": "Philadelphia Phillies",
       "data": [
         -1,
@@ -4918,11 +4919,11 @@
         -27,
         -26
       ],
-      "strokeColor": "rgba(40,72,152,0.2)",
-      "pointColor": "rgba(40,72,152,1)",
-      "__highlightColor": "rgba(40,72,152,1)"
+      "strokeColor": "rgba(40,72,152,0.05)",
+      "pointColor": "rgba(40,72,152,1)"
     },
     {
+      "teamId": "NYN",
       "label": "New York Mets",
       "data": [
         1,
@@ -5088,11 +5089,11 @@
         7,
         8
       ],
-      "strokeColor": "rgba(255,89,16,0.2)",
-      "pointColor": "rgba(255,89,16,1)",
-      "__highlightColor": "rgba(255,89,16,1)"
+      "strokeColor": "rgba(255,89,16,0.05)",
+      "pointColor": "rgba(255,89,16,1)"
     },
     {
+      "teamId": "WAS",
       "label": "Washington Nationals",
       "data": [
         -1,
@@ -5258,9 +5259,8 @@
         1,
         0
       ],
-      "strokeColor": "rgba(171,0,3,0.2)",
-      "pointColor": "rgba(171,0,3,1)",
-      "__highlightColor": "rgba(171,0,3,1)"
+      "strokeColor": "rgba(171,0,3,0.05)",
+      "pointColor": "rgba(171,0,3,1)"
     }
   ]
 }

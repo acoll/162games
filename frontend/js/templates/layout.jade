@@ -13,7 +13,7 @@
 								.columns.bottom-line.desktop-12.no-pad-top
 									h3 #{division}
 									each team in teams.filter(t => t.division === division && t.conference === 'American')
-										.teamname(class=team.team_id) #{team.first_name}
+										.teamname(class=team.team_id teamId=team.abbreviation) #{team.first_name}
 		.columns.desktop-6.mlb-blue-bg
 			.row
 				.columns.bottom-line.desktop-12
@@ -24,7 +24,7 @@
 								.columns.bottom-line.desktop-12.no-pad-top
 									h3 #{division}
 									each team in teams.filter(t => t.division === division && t.conference === 'National')
-										.teamname(class=team.team_id) #{team.first_name}
+										.teamname(class=team.team_id teamId=team.abbreviation) #{team.first_name}
 		.columns.desktop-12
 			h3.align-center Team Win/Loss
 			.chart-holder
