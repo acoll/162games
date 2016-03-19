@@ -14,16 +14,9 @@ module.exports = {
 	xAxis: {
 	    enabled: false
 	},
-	xAxis: {
-            allowDecimals: false,
-            title: {
-                text: 'Fruit'
-            },
-            visible: false
-        },
 	yAxis: {
 	    title: {
-	        text: 'Wins +/-'
+	        text: ''
 	    },
 	    plotLines: [{
 	        value: 0,
@@ -32,16 +25,24 @@ module.exports = {
 	    }]
 	},
 	tooltip: {
-	    valueSuffix: 'Wins'
+	    valueSuffix: ''
 	},
 	legend: {
 	    enabled: false
 	},
 	plotOptions: {
+
         series: {
             marker: {
-                radius: 0
+                radius: 0,
+                lineColor: null,
+                    states: {
+                        hover: {
+                            fillColor: 'white',
+                            radius: 15,
+                        }
+                    }
+                }
             }
         }
-    }
 };
