@@ -4,6 +4,8 @@ var Highcharts = require('highcharts');
 var _ = require('underscore');
 var color = require('onecolor');
 
+var chartOptions = require('../chart-options');
+
 var teams = window.teams = require('../teams.json');
 var gameData = require('../games.json');
 
@@ -33,8 +35,8 @@ function buildDataSeries (fn) {
 		return {
 			name: gameData[key] ? teams[key].first_name + ' ' + teams[key].last_name : 'UNKNOWN: ' + key,
 			data: gameData[key].games.map(fn),
-			strokeColor: strokeColor,
-			pointColor: highlightColor
+			type: 'line',
+			color: strokeColor
 	    };
     });
 }
@@ -63,40 +65,9 @@ module.exports = Mn.LayoutView.extend({
 	},
 	onRender: function () {
 
-		Highcharts.chart(this.$el.find('#chart')[0], {
-	        title: {
-	            text: 'Monthly Average Temperature',
-	            x: -20 //center
-	        },
-	        subtitle: {
-	            text: 'Source: WorldClimate.com',
-	            x: -20
-	        },
-	        xAxis: {
-	            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-	                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-	        },
-	        yAxis: {
-	            title: {
-	                text: 'Temperature (°C)'
-	            },
-	            plotLines: [{
-	                value: 0,
-	                width: 1,
-	                color: '#808080'
-	            }]
-	        },
-	        tooltip: {
-	            valueSuffix: '°C'
-	        },
-	        legend: {
-	            layout: 'vertical',
-	            align: 'right',
-	            verticalAlign: 'middle',
-	            borderWidth: 0
-	        },
-	        series: buildDataSeries(g => g.wins)
-	    });
+
+
+		Highcharts.chart(this.$el.find('#chart')[0], _.extend(chartOptions, { series: buildDataSeries(g => g.wins) }));
 
 		// if(this.$el.find('#chart')[0]) {
 		// 	var ctx = this.$el.find('#chart')[0].getContext('2d');
