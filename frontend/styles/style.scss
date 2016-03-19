@@ -66,7 +66,9 @@ body{
 	background-color: rgba(0, 0, 0, 1);
 	color: #ffffff;
 }
-
+.no-bg{
+	background-color: #ffffff;
+}
 .bottom-line {
 	padding: 0;
 }
@@ -85,7 +87,7 @@ body{
 	padding-top: 2px;
 	padding-bottom: 2px;
 	&.inactive{
-		opacity: 0.25;
+		opacity: 0.5;
 	}
 }
 

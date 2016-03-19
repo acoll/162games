@@ -3,26 +3,26 @@
 		.columns.bottom-line.desktop-12.black-bg
 			h1 162 Games
 			p Select a team or teams to highlight their metrics in the charts below.
-		.columns.desktop-6.mlb-red-bg
+		.columns.desktop-6
 			.row
-				.columns.bottom-line.desktop-12
+				.columns.bottom-line.desktop-12.mlb-red-bg
 					h1 American League
 					each division in ['East', 'Central', 'West']
 						.columns.desktop-4.border-1LR
-							.row
+							h3 #{division}
+							.row.no-bg
 								.columns.bottom-line.desktop-12.no-pad-top
-									h3 #{division}
 									each team in teams.filter(t => t.division === division && t.conference === 'American')
 										.teamname.clickable(class=team.team_id teamId=team.abbreviation) #{team.first_name}
-		.columns.desktop-6.mlb-blue-bg
+		.columns.desktop-6
 			.row
-				.columns.bottom-line.desktop-12
+				.columns.bottom-line.desktop-12.mlb-blue-bg
 					h1 National League
 					each division in ['East', 'Central', 'West']
 						.columns.desktop-4.border-1LR
-							.row
+							h3 #{division}
+							.row.no-bg
 								.columns.bottom-line.desktop-12.no-pad-top
-									h3 #{division}
 									each team in teams.filter(t => t.division === division && t.conference === 'National')
 										.teamname.clickable(class=team.team_id teamId=team.abbreviation) #{team.first_name}
 		.columns.desktop-12
