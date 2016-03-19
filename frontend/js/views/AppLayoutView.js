@@ -22,11 +22,12 @@ function buildDataSeries (fn) {
 			color: strokeColor,
 			lineWidth: 2,
 			marker: {
-                // symbol: `url(/images/${teams[key].team_id}.svg)`,
+				enabled: false,
+                symbol: `url(/images/${teams[key].team_id}.svg)`,
                 radius: 0,
                 states: {
                 	hover: {
-                		radius: 15
+                		enabled: true
                 	}
                 }
             },
@@ -42,7 +43,8 @@ var datas = {
 	stolenBases: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.stolenBases) }),
 	averages: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.averages) }),
 	strikeouts: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.strikeouts) }),
-	errors: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.errors) })
+	errors: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.errors) }),
+	slugPercentage:_.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.slugPercentage) }),
 };
 
 var opts = require('../win-percentage-opts.js');

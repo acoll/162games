@@ -20,6 +20,9 @@ var Team = function () {
 	this.atBats = 0;
 	this.strikeouts = 0;
 	this.errors = 0;
+	this.triples = 0;
+	this.doubles = 0;
+	this.singles = 0;
 }
 
 csv.parse(data, (err, data) => {
@@ -41,6 +44,12 @@ csv.parse(data, (err, data) => {
 		teams[away].homeruns += parseInt(row[25]);
 		teams[home].homeruns += parseInt(row[53]);
 
+		teams[home].triples += parseInt(row[52]);
+		teams[away].triples += parseInt(row[24]);
+
+		teams[home].doubles += parseInt(row[51]);
+		teams[away].doubles += parseInt(row[23]);
+
 		teams[home].runs += homeScore;
 		teams[away].runs += awayScore;
 
@@ -60,6 +69,9 @@ csv.parse(data, (err, data) => {
 
 		teams[home].errors += parseInt(row[73]);
 		teams[away].errors += parseInt(row[45]);
+
+		teams[home].singles = teams[home].hits - teams[home].doubles - teams[home].triples - teams[home].homeruns;
+		teams[away].singles = teams[away].hits - teams[away].doubles - teams[away].triples - teams[away].homeruns;
 
 
 		if(awayScore > homeScore) {
@@ -83,7 +95,8 @@ csv.parse(data, (err, data) => {
 			stolenBases: teams[away].stolenBases,
 			averages: teams[away].hits / teams[away].atBats,
 			strikeouts: teams[away].strikeouts,
-			errors: teams[away].errors
+			errors: teams[away].errors,
+			slugPercentage: ((teams[away].homeruns * 4) + (teams[away].triples * 3) + (teams[away].doubles * 2) + (teams[away].singles))/ teams[away].atBats
 		});
 		teams[home].games.push({
 			game: homeGameNum,
@@ -95,7 +108,8 @@ csv.parse(data, (err, data) => {
 			stolenBases: teams[home].stolenBases,
 			averages: teams[home].hits / teams[home].atBats,
 			strikeouts: teams[home].strikeouts,
-			errors: teams[home].errors
+			errors: teams[home].errors,
+			slugPercentage: ((teams[home].homeruns * 4) + (teams[home].triples * 3) + (teams[home].doubles * 2) + (teams[home].singles))/ teams[home].atBats
 		});
 
 	});
