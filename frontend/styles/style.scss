@@ -20,10 +20,10 @@ html, body, h1, h2, h3, h4, h5, p, div { font-family: 'Roboto Slab', serif; }
 
 h1{	font-size: 36px; text-transform: uppercase; line-height: 20px; }
 h2{	font-size: 28px; line-height: 10px; }
-h3{	font-size: 24px; }
+h3{	font-size: 24px; line-height: 4px; }
 h4{	font-size: 20px; line-height: 0px; }
 h5{	font-size: 18px; font-weight: 700; }
-h6{	font-size: 16px; text-transform: uppercase; }
+h6{	font-size: 10px; text-transform: uppercase; }
 p{	font-size: 16px; }
 
 body{
@@ -33,34 +33,11 @@ body{
 	padding-left: 0;
 	padding-right: 0;
 	margin:0vw;
-	// .columns {
-	// 	padding-top: 0;
-	// 	padding-bottom: 0;
-	// }
+	width: 100vw;
 }
 
 .row {
-	width: 100%;
-	max-width:none;
-	padding-bottom: 0;
-	margin: 0vw;
-
-	.row{
-		margin: 0 -1vw;
-	}
-
-	.columns {
-		&.no-pad-top{ padding-top: 0;}
-		&.no-pad-bottom{ padding-bottom: 0;}
-		&.no-pad-left{ padding-left: 0;}
-		&.no-pad-right{ padding-right: 0;}
-		&.no-pad-all{ padding: 0;}
-		&.yes-pad-top{ padding-top: 10vh;}
-		&.yes-pad-bottom{ padding-bottom: 10vh;}
-		&.yes-pad-left{ padding-left: 5vw;}
-		&.yes-pad-right{ padding-right: 5vw;}
-		&.yes-pad-all{ padding: 5vw;}
-	}
+	max-width: 100%;
 }
 
 .half-height{
@@ -90,18 +67,25 @@ body{
 .bottom-line {
 	padding: 0;
 }
+.border-1LR{
+	border-left:solid 1px #000;
+	border-right:solid 1px #000;
+	border-top:solid 2px #000;
+}
 
 .teamname {
 	font-size: 20px;
 	font-weight: bold;
 	padding-top: 2px;
 	padding-bottom: 2px;
-    outline-style: solid;
-    outline-width: 2px;
-    outline-color: #000000;
+	&.inactive{
+		opacity: 0.25;
+	}
 }
 
 .chart-holder {
 	width: 100%;
+	padding: 0;
 	height: 400px;
+	background-color: rgba(35, 40, 48, 0.2);
 }
