@@ -1,66 +1,65 @@
-.row
-	.columns.bottom-line.desktop-12.black-bg
-		h1 162 Games
-		p Select a team or teams to highlight their metrics in the charts below.
-	.columns.desktop-6.mlb-red-bg
-		.row
-			.columns.bottom-line.desktop-12
-				h1 American League
-				each division in ['East', 'Central', 'West']
-					.columns.desktop-4
-						.row
-							.columns.bottom-line.desktop-12
-								h4 #{division}
-							.columns.bottom-line.desktop-12
-								each team in teams.filter(t => t.division === division && t.conference === 'American')
-									.teamname(class=team.team_id) #{team.first_name}
-	.columns.desktop-6.mlb-blue-bg
-		.row
-			.columns.bottom-line.desktop-12
-				h1 National League
-				each division in ['East', 'Central', 'West']
-					.columns.desktop-4
-						.row
-							.columns.bottom-line.desktop-12
-								h4 #{division}
-							.columns.bottom-line.desktop-12
-								each team in teams.filter(t => t.division === division && t.conference === 'National')
-									.teamname(class=team.team_id) #{team.first_name}
-	.columns.desktop-12
-		h3.align-center Team Win/Loss
-		.chart-holder
-			canvas#chart
-	.columns.desktop-6
-		h3.align-center Offense
-		.row
-			.columns.desktop-2
-				h6 HRs
-			.columns.desktop-2
-				h6 RUNS
-			.columns.desktop-2
-				h6 AVG
-			.columns.desktop-2
-				h6 SB
-			.columns.desktop-2
-				h6 SB%
-			.columns.desktop-2
-				h6 SLG%
-		.chart-holder
-			p PLACE CHART HERE
-	.columns.desktop-6
-		h3.align-center Pitching
-		.row
-			.columns.desktop-2
-				h6 ERA
-			.columns.desktop-2
-				h6 WHIP
-			.columns.desktop-2
-				h6 Ks
-			.columns.desktop-2
-				h6 K/9
-			.columns.desktop-2
-				h6 BB/9
-			.columns.desktop-2
-				h6 AST
-		.chart-holder
-			p PLACE CHART HERE
+.container
+	.row
+		.columns.bottom-line.desktop-12.black-bg
+			h1 162 Games
+			p Select a team or teams to highlight their metrics in the charts below.
+		.columns.desktop-6.mlb-red-bg
+			.row
+				.columns.bottom-line.desktop-12
+					h1 American League
+					each division in ['East', 'Central', 'West']
+						.columns.desktop-4.no-pad-top
+							.row
+								.columns.bottom-line.desktop-12.no-pad-top
+									h3 #{division}
+									each team in teams.filter(t => t.division === division && t.conference === 'American')
+										.teamname(class=team.team_id) #{team.first_name}
+		.columns.desktop-6.mlb-blue-bg
+			.row
+				.columns.bottom-line.desktop-12
+					h1 National League
+					each division in ['East', 'Central', 'West']
+						.columns.desktop-4.no-pad-top
+							.row
+								.columns.bottom-line.desktop-12.no-pad-top
+									h3 #{division}
+									each team in teams.filter(t => t.division === division && t.conference === 'National')
+										.teamname(class=team.team_id) #{team.first_name}
+		.columns.desktop-12
+			h3.align-center Team Win/Loss
+			.chart-holder
+				canvas#chart
+		.columns.desktop-6
+			h3.align-center Offense
+			.row
+				.columns.desktop-2
+					h6 HRs
+				.columns.desktop-2
+					h6 RUNS
+				.columns.desktop-2
+					h6 AVG
+				.columns.desktop-2
+					h6 SB
+				.columns.desktop-2
+					h6 SB%
+				.columns.desktop-2
+					h6 SLG%
+			.chart-holder
+				p PLACE CHART HERE
+		.columns.desktop-6
+			h3.align-center Pitching
+			.row
+				.columns.desktop-2
+					h6 ERA
+				.columns.desktop-2
+					h6 WHIP
+				.columns.desktop-2
+					h6 Ks
+				.columns.desktop-2
+					h6 K/9
+				.columns.desktop-2
+					h6 BB/9
+				.columns.desktop-2
+					h6 AST
+			.chart-holder
+				p PLACE CHART HERE
