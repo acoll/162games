@@ -18,6 +18,7 @@
     "grunt-contrib-jshint": "^0.11.3",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-sass": "^1.1.0",
+    "highcharts": "^4.2.3",
     "jadeify": "github:domenic/jadeify",
     "jquery": "github:jquery/jquery#2.1.4",
     "onecolor": "^3.0.0",
