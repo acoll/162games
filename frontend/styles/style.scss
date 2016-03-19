@@ -102,7 +102,10 @@ body{
 
 	}
 }
-
+.inactive{
+	opacity: 0.5;
+	transition: opacity .25s ease-in-out;
+}
 .chart-holder {
 	width: 100%;
 	padding: 0;
