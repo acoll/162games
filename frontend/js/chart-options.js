@@ -34,6 +34,7 @@ module.exports = {
 	plotOptions: {
 
         series: {
+        	lineWidth: 2
             marker: {
                 radius: 0,
                 lineColor: null,
