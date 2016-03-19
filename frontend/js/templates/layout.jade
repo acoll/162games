@@ -2,7 +2,6 @@
 	.columns.bottom-line.desktop-12.black-bg
 		h1 162 Games
 		p Select a team or teams to highlight their metrics in the charts below.
-
 	.columns.desktop-6.mlb-red-bg
 		.row
 			.columns.bottom-line.desktop-12
@@ -28,23 +27,40 @@
 								each team in teams.filter(t => t.division === division && t.conference === 'National')
 									.teamname(class=team.team_id) #{team.first_name}
 	.columns.desktop-12
-		h3.align-center Games Above or Below .500
-	.columns.desktop-12
+		h3.align-center Team Win/Loss
 		.chart-holder
 			canvas#chart
 	.columns.desktop-6
-		h3.align-center Home Runs
+		h3.align-center Offense
+		.row
+			.columns.desktop-2
+				h6 HRs
+			.columns.desktop-2
+				h6 RUNS
+			.columns.desktop-2
+				h6 AVG
+			.columns.desktop-2
+				h6 SB
+			.columns.desktop-2
+				h6 SB%
+			.columns.desktop-2
+				h6 SLG%
 		.chart-holder
-			canvas#chart2
+			p PLACE CHART HERE
 	.columns.desktop-6
-		h3.align-center Earned Runs Allowed
+		h3.align-center Pitching
+		.row
+			.columns.desktop-2
+				h6 ERA
+			.columns.desktop-2
+				h6 WHIP
+			.columns.desktop-2
+				h6 Ks
+			.columns.desktop-2
+				h6 K/9
+			.columns.desktop-2
+				h6 BB/9
+			.columns.desktop-2
+				h6 AST
 		.chart-holder
-			canvas#chart3
-	.columns.desktop-6
-		h3.align-center Errors
-		.chart-holder
-			canvas#chart4
-	.columns.desktop-6
-		h3.align-center Runs +/-
-		.chart-holder
-			canvas#chart5
+			p PLACE CHART HERE
