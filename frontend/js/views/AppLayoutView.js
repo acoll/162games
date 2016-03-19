@@ -45,7 +45,10 @@ var datas = {
 	strikeouts: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.strikeouts) }),
 	errors: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.errors) }),
 	slugPercentage: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.slugPercentage) }),
-	era: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.era) })
+	era: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.era) }),
+	whip: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.whip) }),
+	k9: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.k9) }),
+	w9: _.extend(_.clone(chartOptions), { series: buildDataSeries(g => g.w9) })
 };
 
 var opts = require('../win-percentage-opts.js');
