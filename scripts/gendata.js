@@ -13,6 +13,8 @@ var Team = function () {
 	this.wins = 0;
 	this.homeruns = 0;
 	this.totalWins = 0;
+	this.runs = 0;
+	this.runsPm = 0;
 }
 
 csv.parse(data, (err, data) => {
@@ -34,6 +36,12 @@ csv.parse(data, (err, data) => {
 		teams[away].homeruns += parseInt(row[25]);
 		teams[home].homeruns += parseInt(row[53]);
 
+		teams[home].runs += homeScore;
+		teams[away].runs += awayScore;
+
+		teams[home].runsPm += (homeScore - awayScore);
+		teams[away].runsPm += (awayScore - homeScore);
+
 
 		if(awayScore > homeScore) {
 			teams[away].totalWins++;
@@ -50,13 +58,17 @@ csv.parse(data, (err, data) => {
 			game: awayGameNum,
 			wins: teams[away].wins,
 			perc: teams[away].wins / awayGameNum,
-			homeruns: teams[away].homeruns
+			homeruns: teams[away].homeruns,
+			runs: teams[away].runs,
+			runsPm: teams[away].runsPm
 		});
 		teams[home].games.push({
 			game: homeGameNum,
 			wins: teams[home].wins,
 			perc: teams[home].wins / homeGameNum,
-			homeruns: teams[home].homeruns
+			homeruns: teams[home].homeruns,
+			runs: teams[home].runs,
+			runsPm: teams[home].runsPm
 		});
 
 	});

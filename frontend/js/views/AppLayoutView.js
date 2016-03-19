@@ -25,16 +25,20 @@ function buildChartOpts (fn) {
 
 var winPerc = buildChartOpts(g => g.wins);
 var homeRuns = buildChartOpts(g => g.homeruns);
+var runsData = buildChartOpts(g => g.runs);
 
 var opts = require('../win-percentage-opts.js');
 
 module.exports = Mn.LayoutView.extend({
 	template: require('../templates/layout.jade'),
 	events: {
-		'click .teamname': 'clickedTeam'
+		'click .teamname': 'clickedTeam',
+		'click .pick-chart-hitting': 'changeHittingChart',
+		'click .pick-chart-pitching': 'changePitchingChart'
 	},
 	initialize: function () {
 		this.selectedTeams = {};
+		window.VIEW = this;
 	},
 	templateHelpers: function () {
 		return {
@@ -76,5 +80,39 @@ module.exports = Mn.LayoutView.extend({
 		});
 
 		this.chart.update();
+	},
+	changeHittingChart: function (e) {
+		var chartName = e.currentTarget.getAttribute('chart');
+
+		this.$el.find('.pick-chart-hitting').removeClass('active-chart');
+		this.$el.find(e.currentTarget).addClass('active-chart');
+
+		if(!chartName) {
+			return window.alert('Not Implemented');
+		}
+		console.log(chartName);
+
+		var newData = {
+			'runs': runsData
+		}[chartName] || homeRuns;
+
+		this.hittingChart = new Chart(this.$el.find('#hitting-chart')[0].getContext('2d')).Line(newData, opts);
+	},
+	changePitchingChart: function (e) {
+		var chartName = e.currentTarget.getAttribute('chart');
+
+		this.$el.find('.pick-chart-pitching').removeClass('active-chart');
+		this.$el.find(e.currentTarget).addClass('active-chart');
+
+		if(!chartName) {
+			return window.alert('Not Implemented');
+		}
+		console.log(chartName);
+
+		var newData = {
+			'runs': runsData
+		}[chartName] || homeRuns;
+
+		this.hittingChart = new Chart(this.$el.find('#pitching-chart')[0].getContext('2d')).Line(newData, opts);
 	}
 });
