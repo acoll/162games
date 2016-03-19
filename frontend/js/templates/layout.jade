@@ -1,8 +1,9 @@
 .container
 	.row
 		.columns.bottom-line.desktop-12.black-bg
+			.spacer
 			h1 162 Games
-			p Select a team or teams to highlight their metrics in the charts below.
+			h6 Select teams to highlight their metrics in the charts below.
 		.columns.desktop-6
 			.row
 				.columns.bottom-line.desktop-12.mlb-red-bg
@@ -26,40 +27,44 @@
 									each team in teams.filter(t => t.division === division && t.conference === 'National')
 										.teamname.clickable(class=team.team_id teamId=team.abbreviation) #{team.first_name}
 		.columns.desktop-12
+			.spacer
 			h3.align-center Team Win/Loss
 			.chart-holder
 				canvas#chart
+			.spacer
 		.columns.desktop-6
 			h3.align-center Hitting
-			.row
-				.columns.desktop-2.grey-bg
-					h6 HRs
+			.row.no-marg
+				.columns.desktop-2.active-chart
+					h4 HRs
 				.columns.desktop-2
-					h6 RUNS
+					h4 RUNS
 				.columns.desktop-2
-					h6 AVG
+					h4 AVG
 				.columns.desktop-2
-					h6 SB
+					h4 SB
 				.columns.desktop-2
-					h6 SB%
+					h4 SB%
 				.columns.desktop-2
-					h6 SLG%
-			.chart-holder
-				p PLACE CHART HERE
+					h4 SLG%
+				.columns.desktop-12.grey-bg
+					.chart-holder
+						p PLACE CHART HERE
 		.columns.desktop-6.no-pad-LR
 			h3.align-center Pitching
-			.row
-				.columns.desktop-2.grey-bg
-					h6 ERA
+			.row.no-marg
+				.columns.desktop-2.active-chart
+					h4 ERA
 				.columns.desktop-2
-					h6 WHIP
+					h4 WHIP
 				.columns.desktop-2
-					h6 Ks
+					h4 Ks
 				.columns.desktop-2
-					h6 K/9
+					h4 K/9
 				.columns.desktop-2
-					h6 BB/9
+					h4 BB/9
 				.columns.desktop-2
-					h6 AST
-			.chart-holder.grey-bg
-				p PLACE CHART HERE
+					h4 AST
+				.columns.desktop-12.grey-bg
+					.chart-holder
+						p PLACE CHART HERE
