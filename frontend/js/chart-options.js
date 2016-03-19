@@ -14,6 +14,13 @@ module.exports = {
 	xAxis: {
 	    enabled: false
 	},
+	xAxis: {
+            allowDecimals: false,
+            title: {
+                text: 'Fruit'
+            },
+            visible: false
+        },
 	yAxis: {
 	    title: {
 	        text: 'Wins +/-'
@@ -29,5 +36,12 @@ module.exports = {
 	},
 	legend: {
 	    enabled: false
-	}
+	},
+	plotOptions: {
+        series: {
+            marker: {
+                radius: 0
+            }
+        }
+    }
 };
