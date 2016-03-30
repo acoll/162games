@@ -80,6 +80,9 @@ module.exports = Mn.LayoutView.extend({
 		});
 	},
 	highlightTeam: function (name) {
+
+		ga('send', 'event', 'Team', 'click', name);
+
 		var seriesChart = this.chart.series.find(series => series.name === name);
 		var seriesHitting = this.hittingChart.series.find(series => series.name === name);
 		var seriesPitching = this.pitchingChart.series.find(series => series.name === name);
