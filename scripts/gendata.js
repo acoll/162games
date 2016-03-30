@@ -147,7 +147,7 @@ csv.parse(data, (err, data) => {
 			slugPercentage: ((teams[away].homeruns * 4) + (teams[away].triples * 3) + (teams[away].doubles * 2) + (teams[away].singles))/ teams[away].atBats
 		});
 		teams[home].games.push({
-			whip: (teams[home].opp_walks + teams[home].opp_hitByPitch)/ teams[home].inningsPitched,
+			whip: (teams[home].opp_walks + teams[home].opp_hits)/ teams[home].inningsPitched,
 			k9: 9 * teams[home].opp_strikeouts / teams[home].inningsPitched,
 			w9: 9 * teams[home].opp_walks / teams[home].inningsPitched,
 			game: homeGameNum,
