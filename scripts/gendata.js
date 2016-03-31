@@ -130,7 +130,7 @@ csv.parse(data, (err, data) => {
 
 		teams[away].games.push({
 			whip: (teams[away].opp_walks + teams[away].opp_hits)/ teams[away].inningsPitched,
-			k9: 9 * teams[away].opp_strikeouts / teams[away].inningsPitched,
+			k9: 9 * teams[away].strikeouts / teams[away].inningsPitched,
 			w9: 9 * teams[away].opp_walks / teams[away].inningsPitched,
 			game: awayGameNum,
 			wins: teams[away].wins,
@@ -148,8 +148,8 @@ csv.parse(data, (err, data) => {
 		});
 		teams[home].games.push({
 			whip: (teams[home].opp_walks + teams[home].opp_hits)/ teams[home].inningsPitched,
-			k9: 9 * teams[home].opp_strikeouts / teams[home].inningsPitched,
-			w9: 9 * teams[home].opp_walks / teams[home].inningsPitched,
+			k9: 9 * teams[home].strikeouts / teams[home].inningsPitched,
+			w9: 9 * teams[home].walks / teams[home].inningsPitched,
 			game: homeGameNum,
 			wins: teams[home].wins,
 			perc: teams[home].wins / homeGameNum,
