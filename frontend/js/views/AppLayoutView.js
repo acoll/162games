@@ -72,7 +72,7 @@ module.exports = Mn.LayoutView.extend({
 	onRender: function () {
 		this.chart = Highcharts.chart(this.$el.find('#chart')[0], datas.wins);
 		this.hittingChart = Highcharts.chart(this.$el.find('#hitting-chart')[0], datas.homeruns);
-		this.pitchingChart = Highcharts.chart(this.$el.find('#pitching-chart')[0], datas.errors);
+		this.pitchingChart = Highcharts.chart(this.$el.find('#pitching-chart')[0], datas.era);
 	},
 	highlightSelected: function () {
 		Object.keys(this.selectedTeams).forEach(k => {
