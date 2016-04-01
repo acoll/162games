@@ -131,7 +131,7 @@ csv.parse(data, (err, data) => {
 		teams[away].games.push({
 			whip: (teams[away].opp_walks + teams[away].opp_hits)/ teams[away].inningsPitched,
 			k9: 9 * teams[away].strikeouts / teams[away].inningsPitched,
-			w9: 9 * teams[away].opp_walks / teams[away].inningsPitched,
+			w9: 9 * teams[away].walks / teams[away].inningsPitched,
 			game: awayGameNum,
 			wins: teams[away].wins,
 			perc: teams[away].wins / awayGameNum,
